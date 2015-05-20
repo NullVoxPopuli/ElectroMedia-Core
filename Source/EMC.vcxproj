@@ -43,6 +43,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>..\Debug\</OutDir>
+    <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -54,7 +55,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProgramFiles)\boost\stage\lib;$(ProgramFiles)\boost;$(ProjectDir)\Source\Dependencies\json;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProgramFiles)\boost;$(ProjectDir)\Source\Dependencies;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -81,14 +82,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.md" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Core\AnalyzerFactory.h" />
     <ClInclude Include="Core\CoreMath.h" />
     <ClInclude Include="Core\ConfigurationFileFields.h" />
+    <ClInclude Include="Core\fftw3.h" />
     <ClInclude Include="Core\SettingsBuilder.h" />
     <ClInclude Include="Core\Constants.h" />
+    <ClInclude Include="Core\EmcCore.h" />
+    <ClInclude Include="Core\EmcSettings.h" />
+    <ClInclude Include="Core\FFmpegReturnValues.h" />
+    <ClInclude Include="Analyzers\HillEffectAnalyzer.h" />
+    <ClInclude Include="Analyzers\IntensityAnalyzer.h" />
+    <ClInclude Include="Core\NoteNames.h" />
+    <ClInclude Include="Core\EMCModes.h" />
+    <ClInclude Include="Analyzers\FeatureExtractionAnalyzer.h" />
+    <ClInclude Include="Core\ArduinoReadableFileWriter.h" />
     <ClInclude Include="Dependencies\boost\assert.hpp" />
     <ClInclude Include="Dependencies\boost\checked_delete.hpp" />
     <ClInclude Include="Dependencies\boost\config.hpp" />
@@ -270,7 +278,6 @@
     <ClInclude Include="Dependencies\boost\exception\N3757.hpp" />
     <ClInclude Include="Dependencies\boost\exception\to_string.hpp" />
     <ClInclude Include="Dependencies\boost\exception\to_string_stub.hpp" />
-    <ClInclude Include="Dependencies\boost\predef.h" />
     <ClInclude Include="Dependencies\boost\smart_ptr\allocate_shared_array.hpp" />
     <ClInclude Include="Dependencies\boost\smart_ptr\bad_weak_ptr.hpp" />
     <ClInclude Include="Dependencies\boost\smart_ptr\detail\array_allocator.hpp" />
@@ -372,12 +379,7 @@
     <ClInclude Include="dev\include\libavcodec\avcodec.h" />
     <ClInclude Include="dev\include\libavcodec\avfft.h" />
     <ClInclude Include="dev\include\libavcodec\dxva2.h" />
-    <ClInclude Include="dev\include\libavcodec\old_codec_ids.h" />
-    <ClInclude Include="dev\include\libavcodec\vaapi.h" />
-    <ClInclude Include="dev\include\libavcodec\vda.h" />
-    <ClInclude Include="dev\include\libavcodec\vdpau.h" />
     <ClInclude Include="dev\include\libavcodec\version.h" />
-    <ClInclude Include="dev\include\libavcodec\xvmc.h" />
     <ClInclude Include="dev\include\libavdevice\avdevice.h" />
     <ClInclude Include="dev\include\libavdevice\version.h" />
     <ClInclude Include="dev\include\libavfilter\asrc_abuffer.h" />
@@ -424,48 +426,12 @@
     <ClInclude Include="dev\include\libavutil\lfg.h" />
     <ClInclude Include="dev\include\libavutil\log.h" />
     <ClInclude Include="dev\include\libavutil\lzo.h" />
-    <ClInclude Include="dev\include\libavutil\macros.h" />
-    <ClInclude Include="dev\include\libavutil\mathematics.h" />
-    <ClInclude Include="dev\include\libavutil\md5.h" />
-    <ClInclude Include="dev\include\libavutil\mem.h" />
-    <ClInclude Include="dev\include\libavutil\murmur3.h" />
-    <ClInclude Include="dev\include\libavutil\old_pix_fmts.h" />
-    <ClInclude Include="dev\include\libavutil\opt.h" />
-    <ClInclude Include="dev\include\libavutil\parseutils.h" />
-    <ClInclude Include="dev\include\libavutil\pixdesc.h" />
-    <ClInclude Include="dev\include\libavutil\pixfmt.h" />
-    <ClInclude Include="dev\include\libavutil\random_seed.h" />
-    <ClInclude Include="dev\include\libavutil\rational.h" />
-    <ClInclude Include="dev\include\libavutil\replaygain.h" />
-    <ClInclude Include="dev\include\libavutil\ripemd.h" />
-    <ClInclude Include="dev\include\libavutil\samplefmt.h" />
-    <ClInclude Include="dev\include\libavutil\sha.h" />
-    <ClInclude Include="dev\include\libavutil\sha512.h" />
-    <ClInclude Include="dev\include\libavutil\stereo3d.h" />
-    <ClInclude Include="dev\include\libavutil\time.h" />
-    <ClInclude Include="dev\include\libavutil\timecode.h" />
-    <ClInclude Include="dev\include\libavutil\timestamp.h" />
     <ClInclude Include="dev\include\libavutil\version.h" />
-    <ClInclude Include="dev\include\libavutil\xtea.h" />
-    <ClInclude Include="dev\include\libpostproc\postprocess.h" />
     <ClInclude Include="dev\include\libpostproc\version.h" />
-    <ClInclude Include="dev\include\libswresample\swresample.h" />
     <ClInclude Include="dev\include\libswresample\version.h" />
-    <ClInclude Include="dev\include\libswscale\swscale.h" />
     <ClInclude Include="dev\include\libswscale\version.h" />
-    <ClInclude Include="Core\EmcCore.h" />
-    <ClInclude Include="Core\EmcSettings.h" />
-    <ClInclude Include="Core\FFmpegReturnValues.h" />
-    <ClInclude Include="Analyzers\HillEffectAnalyzer.h" />
-    <ClInclude Include="Analyzers\IntensityAnalyzer.h" />
-    <ClInclude Include="Core\NoteNames.h" />
-    <ClInclude Include="Core\EMCModes.h" />
-    <ClInclude Include="Analyzers\FeatureExtractionAnalyzer.h" />
-    <ClInclude Include="Core\ArduinoReadableFileWriter.h" />
     <ClInclude Include="MP3toData.h" />
-    <ClInclude Include="Core\fftw3.h" />
     <ClInclude Include="Core\MusicFileOperations.h" />
-    <ClInclude Include="Core\resource.h" />
     <ClInclude Include="Core\Analyzer.h" />
     <ClInclude Include="Core\stdafx.h" />
     <ClInclude Include="Core\targetver.h" />
@@ -474,7 +440,6 @@
     <ClCompile Include="Core\AnalyzerFactory.cpp" />
     <ClCompile Include="Core\CoreMath.cpp" />
     <ClCompile Include="Core\SettingsBuilder.cpp" />
-    <ClCompile Include="Dependencies\jsoncpp.cpp" />
     <ClCompile Include="Core\EmcCore.cpp" />
     <ClCompile Include="Analyzers\FeatureExtractionAnalyzer.cpp" />
     <ClCompile Include="Core\ArduinoReadableFileWriter.cpp" />
@@ -488,9 +453,13 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Dependencies\jsoncpp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="libfftw3-3.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,1253 +1,1151 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="ElectroMedia">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Internal Dependencies">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Internal Dependencies\Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Internal Dependencies\Included Source">
-      <UniqueIdentifier>{eb0a75a7-55b4-419e-b8fd-4f23df5f61f4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Internal Dependencies\Included Source\Headers">
-      <UniqueIdentifier>{d2063e07-aeca-4216-88b8-1375c3cdb195}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Internal Dependencies\Included Source\Source">
-      <UniqueIdentifier>{656b21c2-0161-4255-8d37-6ff213dd4258}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ElectroMedia\Core">
-      <UniqueIdentifier>{5340d457-7d51-48bf-99bc-30c04ffb5982}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ElectroMedia\Core\Headers">
-      <UniqueIdentifier>{d68bd0d2-bd9c-4ee6-bbf2-3b229c1b4ad4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ElectroMedia\Helpers">
-      <UniqueIdentifier>{179814b2-d436-48e6-8cb7-7b004f3be072}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ElectroMedia\Helpers\Headers">
-      <UniqueIdentifier>{8f38cfc8-ce65-46db-ba75-37299a077f96}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ElectroMedia\Analyzers">
+    <Filter Include="Analyzers">
       <UniqueIdentifier>{6c085062-6565-497e-9174-75468b3efa49}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ElectroMedia\Analyzers\Headers">
+    <Filter Include="Analyzers\Headers">
       <UniqueIdentifier>{3a83bc3a-6505-4d49-ae57-952cb0bf3b0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{5340d457-7d51-48bf-99bc-30c04ffb5982}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Headers">
+      <UniqueIdentifier>{d68bd0d2-bd9c-4ee6-bbf2-3b229c1b4ad4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{179814b2-d436-48e6-8cb7-7b004f3be072}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers\Headers">
+      <UniqueIdentifier>{8f38cfc8-ce65-46db-ba75-37299a077f96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies">
+      <UniqueIdentifier>{067c3afa-ee38-4592-9f76-8604065ed8ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\JsonCpp">
+      <UniqueIdentifier>{4f2d0267-7c7c-4b5e-a705-c2d4f27a0ba5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\FFTW">
+      <UniqueIdentifier>{6076e670-de48-43fa-8339-0b24dbf6d55d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\Boost">
+      <UniqueIdentifier>{79cee116-f51b-4377-b7b7-859e1c97b4d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\FFmpeg">
+      <UniqueIdentifier>{ea3d0412-80d8-41c9-b62a-6b5f57e396a3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Dependencies\boost\config\abi_prefix.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\abi_suffix.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\utility\addressof.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\core\addressof.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\adler32.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\aes.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\platform\aix.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\algorithm.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\all.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\allocate_shared_array.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\allocator_utilities.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\platform\amigaos.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\array_allocator.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\array_count_impl.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\array_traits.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\array_utility.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavfilter\asrc_abuffer.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\assert.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\atomic_count.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\atomic_count.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\atomic_count_gcc.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\atomic_count_gcc_x86.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\atomic_count_nt.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\atomic_count_pt.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\atomic_count_solaris.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\atomic_count_spin.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\atomic_count_std_atomic.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\atomic_count_sync.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\atomic_count_win32.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\atomic_redef_macros.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\atomic_undef_macros.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\attributes.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\audio_fifo.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\audioconvert.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\auto_link.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\avassert.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavcodec\avcodec.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavfilter\avcodec.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\avconfig.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavdevice\avdevice.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavcodec\avfft.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavfilter\avfilter.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavfilter\avfiltergraph.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavformat\avformat.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavformat\avio.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\avstring.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\avutil.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\bad_weak_ptr.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\utility\base_from_member.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\base64.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\basic_pointerbuf.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\basic_types.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\platform\beos.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\utility\binary.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\binary_search.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\bitmask.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\blowfish.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\borland.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\abi\borland_prefix.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\abi\borland_suffix.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\bprint.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\platform\bsd.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\bswap.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\buffer.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavfilter\buffersink.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavfilter\buffersrc.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\call_traits.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\catch_exceptions.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\channel_layout.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\core\checked_delete.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\checked_delete.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\clang.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\detail\clone_current_exception.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\no_tr1\cmath.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\codegear.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\comeau.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\common.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\common_edg.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\compaq_cxx.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\utility\compare_pointees.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\no_tr1\complex.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\compressed_pair.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\config.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\container_fwd.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\cpu.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\cray.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\platform\cray.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\crc.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\current_exception_cast.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\current_function.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\platform\cygwin.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\utility\declval.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\core\demangle.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\diagnostic_information.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\dict.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\digitalmars.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\stdlib\dinkumware.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\directory_management.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\dll.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\downmix_info.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavcodec\dxva2.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\dynamic_bitset.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\utility\empty_deleter.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\enable_current_exception.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\enable_error_info.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\utility\enable_if.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\core\enable_if.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\enable_shared_from_raw.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\enable_shared_from_this.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\endian.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\errinfo_api_function.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\errinfo_at_line.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\errinfo_errno.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\errinfo_file_handle.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\errinfo_file_name.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\errinfo_file_open_mode.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\errinfo_nested_exception.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\errinfo_type_info_name.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\error.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\error_handling.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\error_info.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\detail\error_info_impl.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\eval.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\exception.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\detail\exception_ptr.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\utility\explicit_operator_bool.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\core\explicit_operator_bool.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\fenv.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\ffversion.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\fifo.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\file.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\file_management.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\frame.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\no_tr1\functional.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\gcc.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\gcc_xml.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\get_error_info.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\GetCurrentProcess.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\GetCurrentThread.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\GetLastError.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\GetProcessTimes.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\GetThreadTimes.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\greenhills.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\handles.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\has_default_constructor.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\hmac.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\hp_acc.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\platform\hpux.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\identifier.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\utility\identity_type.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\core\ignore_unused.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\imgutils.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\utility\in_place_factory.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\utility\detail\in_place_factory_prefix.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\utility\detail\in_place_factory_suffix.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\indirect_traits.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\info.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\info_tuple.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\intel.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\interlocked.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\intfloat.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\intfloat_readwrite.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\intreadwrite.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\intrusive_ptr.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\intrusive_ref_counter.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\platform\irix.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\is_incrementable.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\detail\is_output_streamable.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\core\is_same.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\is_sorted.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\is_xxx.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\iterator.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\kai.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\lcast_precision.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\lfg.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\stdlib\libcomo.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\stdlib\libcpp.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\stdlib\libstdcpp3.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\lightweight_main.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\lightweight_mutex.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\lightweight_mutex.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\core\lightweight_test.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\lightweight_test.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\core\lightweight_test_trait.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\lightweight_thread.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\platform\linux.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\LocalFree.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\log.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\lwm_nop.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\lwm_pthreads.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\lwm_win32_cs.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\lzo.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\platform\macos.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\macros.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\make_shared.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\make_shared_array.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\make_shared_object.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\make_unique.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\make_unique_array.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\make_unique_object.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\mathematics.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\md5.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\mem.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\no_tr1\memory.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\memory.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\metrowerks.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\stdlib\modena.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\mpw.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\stdlib\msl.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\abi\msvc_prefix.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\abi\msvc_suffix.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\murmur3.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\N3757.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\named_template_params.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\core\no_exceptions_support.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\no_exceptions_support.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\core\noncopyable.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\core\null_deleter.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\numeric_traits.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\nvcc.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\ob_compressed_pair.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\detail\object_hex_dump.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavcodec\old_codec_ids.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\old_pix_fmts.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\operator_bool.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\opt.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\owner_less.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\parseutils.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\pathscale.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\pgi.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\pixdesc.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\pixfmt.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\posix_features.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libpostproc\postprocess.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\predef.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\process.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\platform\qnxnto.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\quick_allocator.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\quick_allocator.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\random_seed.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\rational.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\core\ref.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\reference_content.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\replaygain.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\requires_threads.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\utility\result_of.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\utility\detail\result_of_iterate.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\ripemd.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\stdlib\roguewave.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\samplefmt.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\scoped_array.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\core\scoped_enum.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\scoped_enum_emulation.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\scoped_ptr.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\security.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\select_compiler_config.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\select_platform_config.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\select_stdlib_config.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\select_type.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\stdlib\sgi.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\sgi_mipspro.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\sha.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\sha512.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\shared_array.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\shared_count.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\shared_ptr.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\platform\solaris.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_convertible.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_acc_ia64.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_aix.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_cw_ppc.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_cw_x86.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_gcc_ia64.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_gcc_mips.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_gcc_ppc.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_gcc_sparc.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_gcc_x86.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_nt.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_pt.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_snc_ps3.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_solaris.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_spin.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_std_atomic.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_sync.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_vacpp_ppc.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_w32.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_impl.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_forward.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_has_sync.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_if_array.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_interlocked.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_nullptr_t.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\sp_typeinfo.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\spinlock.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\spinlock_gcc_arm.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\spinlock_nt.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\spinlock_pool.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\spinlock_pt.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\spinlock_std_atomic.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\spinlock_sync.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\spinlock_w32.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\stereo3d.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\stdlib\stlport.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\utility\string_ref.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\utility\string_ref_fwd.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\suffix.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\sunpro_cc.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\utility\swap.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\core\swap.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libswresample\swresample.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libswscale\swscale.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\platform\symbian.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\synchronization.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\system.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\templated_streams.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\thread.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\thread_pool.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\throw_exception.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\time.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\time.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\timecode.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\timers.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\timestamp.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\tls.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\to_string.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\to_string_stub.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\exception\detail\type_info.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\utility\typed_in_place_factory.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\core\typeinfo.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\core\underlying_type.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\up_if_array.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\up_if_not_array.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\user.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\utf8_codecvt_facet.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\no_tr1\utility.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavcodec\vaapi.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\stdlib\vacpp.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\vacpp.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\utility\value_init.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavcodec\vda.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavcodec\vdpau.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libpostproc\version.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\version.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavfilter\version.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavformat\version.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavdevice\version.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavcodec\version.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libswresample\version.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libswscale\version.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\compiler\visualc.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\platform\vms.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\platform\vxworks.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\winapi\waitable_timer.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\warning_disable.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\weak_ptr.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\config\platform\win32.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\detail\workaround.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavutil\xtea.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="dev\include\libavcodec\xvmc.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\boost\smart_ptr\detail\yield_k.hpp">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\json\json.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Dependencies\json\json-forwards.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
-    </ClInclude>
     <ClInclude Include="Core\Analyzer.h">
-      <Filter>ElectroMedia\Core\Headers</Filter>
+      <Filter>Core\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Core\ArduinoReadableFileWriter.h">
-      <Filter>ElectroMedia\Core\Headers</Filter>
+      <Filter>Core\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Core\CoreMath.h">
-      <Filter>ElectroMedia\Core\Headers</Filter>
+      <Filter>Core\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Core\EmcCore.h">
-      <Filter>ElectroMedia\Core\Headers</Filter>
+      <Filter>Core\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Core\EmcSettings.h">
-      <Filter>ElectroMedia\Core\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Analyzers\FeatureExtractionAnalyzer.h">
-      <Filter>ElectroMedia\Analyzers\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\fftw3.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
+      <Filter>Core\Headers</Filter>
     </ClInclude>
     <ClInclude Include="MP3toData.h">
-      <Filter>ElectroMedia\Core\Headers</Filter>
+      <Filter>Core\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Analyzers\HillEffectAnalyzer.h">
-      <Filter>ElectroMedia\Analyzers\Headers</Filter>
+      <Filter>Analyzers\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Core\MusicFileOperations.h">
-      <Filter>ElectroMedia\Core\Headers</Filter>
+      <Filter>Core\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Analyzers\IntensityAnalyzer.h">
-      <Filter>ElectroMedia\Analyzers\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\resource.h">
-      <Filter>Internal Dependencies\Included Source\Headers</Filter>
+      <Filter>Analyzers\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Core\stdafx.h">
-      <Filter>ElectroMedia\Core\Headers</Filter>
+      <Filter>Core\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Core\targetver.h">
-      <Filter>ElectroMedia\Core\Headers</Filter>
+      <Filter>Core\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Core\ConfigurationFileFields.h">
-      <Filter>ElectroMedia\Helpers\Headers</Filter>
+      <Filter>Helpers\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Core\AnalyzerFactory.h">
-      <Filter>ElectroMedia\Helpers\Headers</Filter>
+      <Filter>Helpers\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Core\Constants.h">
-      <Filter>ElectroMedia\Helpers\Headers</Filter>
+      <Filter>Helpers\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Core\EMCModes.h">
-      <Filter>ElectroMedia\Helpers\Headers</Filter>
+      <Filter>Helpers\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Core\NoteNames.h">
-      <Filter>ElectroMedia\Helpers\Headers</Filter>
+      <Filter>Helpers\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Core\FFmpegReturnValues.h">
-      <Filter>ElectroMedia\Helpers\Headers</Filter>
+      <Filter>Helpers\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Core\SettingsBuilder.h">
-      <Filter>ElectroMedia\Helpers\Headers</Filter>
+      <Filter>Helpers\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\json\json-forwards.h">
+      <Filter>Dependencies\JsonCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\json\json.h">
+      <Filter>Dependencies\JsonCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\fftw3.h">
+      <Filter>Dependencies\FFTW</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\abi_prefix.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\abi_suffix.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\utility\addressof.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\core\addressof.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\platform\aix.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\algorithm.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\all.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\allocate_shared_array.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\allocator_utilities.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\platform\amigaos.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\array_allocator.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\array_count_impl.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\array_traits.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\array_utility.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\assert.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\atomic_count.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\atomic_count.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\atomic_count_gcc.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\atomic_count_gcc_x86.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\atomic_count_nt.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\atomic_count_pt.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\atomic_count_solaris.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\atomic_count_spin.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\atomic_count_std_atomic.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\atomic_count_sync.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\atomic_count_win32.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\atomic_redef_macros.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\atomic_undef_macros.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\auto_link.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\bad_weak_ptr.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\utility\base_from_member.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\basic_pointerbuf.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\basic_types.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\platform\beos.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\utility\binary.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\binary_search.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\bitmask.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\borland.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\abi\borland_prefix.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\abi\borland_suffix.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\platform\bsd.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\call_traits.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\catch_exceptions.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\core\checked_delete.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\checked_delete.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\clang.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\detail\clone_current_exception.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\no_tr1\cmath.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\codegear.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\comeau.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\common_edg.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\compaq_cxx.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\utility\compare_pointees.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\no_tr1\complex.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\compressed_pair.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\config.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\container_fwd.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\cray.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\platform\cray.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\current_exception_cast.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\current_function.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\platform\cygwin.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\utility\declval.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\core\demangle.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\diagnostic_information.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\digitalmars.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\stdlib\dinkumware.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\directory_management.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\dll.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavcodec\dxva2.h">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\dynamic_bitset.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\utility\empty_deleter.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\enable_current_exception.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\enable_error_info.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\utility\enable_if.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\core\enable_if.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\enable_shared_from_raw.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\enable_shared_from_this.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\endian.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\errinfo_api_function.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\errinfo_at_line.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\errinfo_errno.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\errinfo_file_handle.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\errinfo_file_name.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\errinfo_file_open_mode.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\errinfo_nested_exception.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\errinfo_type_info_name.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\error_handling.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\error_info.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\detail\error_info_impl.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\exception.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\detail\exception_ptr.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\core\explicit_operator_bool.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\utility\explicit_operator_bool.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\fenv.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\file_management.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\no_tr1\functional.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\gcc.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\gcc_xml.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\get_error_info.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\GetCurrentProcess.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\GetCurrentThread.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\GetLastError.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\GetProcessTimes.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\GetThreadTimes.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\greenhills.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\handles.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\has_default_constructor.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\hp_acc.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\platform\hpux.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\identifier.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\utility\identity_type.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\core\ignore_unused.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\utility\in_place_factory.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\utility\detail\in_place_factory_prefix.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\utility\detail\in_place_factory_suffix.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\indirect_traits.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\info.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\info_tuple.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\intel.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\interlocked.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\intfloat_readwrite.h">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\intrusive_ptr.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\intrusive_ref_counter.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\platform\irix.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\is_incrementable.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\detail\is_output_streamable.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\core\is_same.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\is_sorted.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\is_xxx.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\iterator.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\kai.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\lcast_precision.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\stdlib\libcomo.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\stdlib\libcpp.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\stdlib\libstdcpp3.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\lightweight_main.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\lightweight_mutex.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\lightweight_mutex.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\lightweight_test.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\core\lightweight_test.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\core\lightweight_test_trait.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\lightweight_thread.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\platform\linux.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\LocalFree.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\lwm_nop.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\lwm_pthreads.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\lwm_win32_cs.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\platform\macos.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\make_shared.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\make_shared_array.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\make_shared_object.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\make_unique.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\make_unique_array.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\make_unique_object.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\memory.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\no_tr1\memory.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\metrowerks.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\stdlib\modena.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\mpw.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\stdlib\msl.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\abi\msvc_prefix.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\abi\msvc_suffix.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\N3757.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\named_template_params.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\core\no_exceptions_support.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\no_exceptions_support.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\core\noncopyable.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\core\null_deleter.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\numeric_traits.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\nvcc.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\ob_compressed_pair.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\detail\object_hex_dump.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\operator_bool.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\owner_less.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\pathscale.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\pgi.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\posix_features.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\process.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\platform\qnxnto.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\quick_allocator.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\quick_allocator.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\core\ref.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\reference_content.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\requires_threads.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\utility\result_of.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\utility\detail\result_of_iterate.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\stdlib\roguewave.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\scoped_array.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\core\scoped_enum.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\scoped_enum_emulation.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\scoped_ptr.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\security.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\select_compiler_config.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\select_platform_config.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\select_stdlib_config.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\select_type.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\stdlib\sgi.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\sgi_mipspro.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\shared_array.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\shared_count.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\shared_ptr.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\platform\solaris.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_convertible.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_acc_ia64.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_aix.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_cw_ppc.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_cw_x86.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_gcc_ia64.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_gcc_mips.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_gcc_ppc.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_gcc_sparc.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_gcc_x86.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_nt.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_pt.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_snc_ps3.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_solaris.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_spin.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_std_atomic.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_sync.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_vacpp_ppc.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_base_w32.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_counted_impl.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_forward.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_has_sync.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_if_array.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_interlocked.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\sp_nullptr_t.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\sp_typeinfo.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\spinlock.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\spinlock_gcc_arm.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\spinlock_nt.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\spinlock_pool.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\spinlock_pt.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\spinlock_std_atomic.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\spinlock_sync.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\spinlock_w32.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\stdlib\stlport.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\utility\string_ref.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\utility\string_ref_fwd.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\suffix.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\sunpro_cc.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\utility\swap.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\core\swap.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\platform\symbian.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\synchronization.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\system.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\templated_streams.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\thread.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\thread_pool.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\throw_exception.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\time.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\timers.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\tls.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\to_string.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\to_string_stub.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\exception\detail\type_info.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\utility\typed_in_place_factory.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\core\typeinfo.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\core\underlying_type.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\up_if_array.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\up_if_not_array.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\user.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\utf8_codecvt_facet.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\no_tr1\utility.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\vacpp.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\stdlib\vacpp.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\utility\value_init.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavformat\version.h">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libswscale\version.h">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavfilter\version.h">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavdevice\version.h">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\version.h">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavcodec\version.h">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libswresample\version.h">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libpostproc\version.h">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\compiler\visualc.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\platform\vms.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\platform\vxworks.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\winapi\waitable_timer.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\warning_disable.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\weak_ptr.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\config\platform\win32.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\detail\workaround.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\boost\smart_ptr\detail\yield_k.hpp">
+      <Filter>Dependencies\Boost</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\adler32.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\aes.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavfilter\asrc_abuffer.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\attributes.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\audio_fifo.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\audioconvert.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\avassert.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavfilter\avcodec.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavcodec\avcodec.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\avconfig.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavdevice\avdevice.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavcodec\avfft.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavfilter\avfilter.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavfilter\avfiltergraph.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavformat\avformat.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavformat\avio.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\avstring.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\avutil.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\base64.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\blowfish.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\bprint.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\bswap.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\buffer.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavfilter\buffersink.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavfilter\buffersrc.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\channel_layout.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\common.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\cpu.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\crc.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\dict.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\downmix_info.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\error.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\eval.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\ffversion.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\fifo.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\file.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\frame.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\hmac.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\imgutils.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\intfloat.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\intreadwrite.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\lfg.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\log.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="dev\include\libavutil\lzo.h">
+      <Filter>Dependencies\FFmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Analyzers\FeatureExtractionAnalyzer.h">
+      <Filter>Analyzers\Headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Dependencies\jsoncpp.cpp">
-      <Filter>Internal Dependencies\Included Source\Source</Filter>
-    </ClCompile>
     <ClCompile Include="Core\Analyzer.cpp">
-      <Filter>ElectroMedia\Core</Filter>
+      <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="Core\ArduinoReadableFileWriter.cpp">
-      <Filter>ElectroMedia\Core</Filter>
+      <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="Core\CoreMath.cpp">
-      <Filter>ElectroMedia\Core</Filter>
+      <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="Core\EmcCore.cpp">
-      <Filter>ElectroMedia\Core</Filter>
+      <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="Core\EntryPoint.cpp">
-      <Filter>ElectroMedia\Core</Filter>
+      <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="Core\MP3toData.cpp">
-      <Filter>ElectroMedia\Core</Filter>
+      <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="Core\MusicFileOperations.cpp">
-      <Filter>ElectroMedia\Core</Filter>
+      <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="Core\stdafx.cpp">
-      <Filter>ElectroMedia\Core</Filter>
+      <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="Core\AnalyzerFactory.cpp">
-      <Filter>ElectroMedia\Helpers</Filter>
+      <Filter>Helpers</Filter>
     </ClCompile>
     <ClCompile Include="Core\SettingsBuilder.cpp">
-      <Filter>ElectroMedia\Helpers</Filter>
+      <Filter>Helpers</Filter>
     </ClCompile>
     <ClCompile Include="Analyzers\FeatureExtractionAnalyzer.cpp">
-      <Filter>ElectroMedia\Analyzers</Filter>
+      <Filter>Analyzers</Filter>
     </ClCompile>
     <ClCompile Include="Analyzers\HillEffectAnalyzer.cpp">
-      <Filter>ElectroMedia\Analyzers</Filter>
+      <Filter>Analyzers</Filter>
     </ClCompile>
     <ClCompile Include="Analyzers\IntensityAnalyzer.cpp">
-      <Filter>ElectroMedia\Analyzers</Filter>
+      <Filter>Analyzers</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="ReadMe.md" />
+    <ClCompile Include="Dependencies\jsoncpp.cpp">
+      <Filter>Dependencies\JsonCpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Library Include="libfftw3-3.lib">
-      <Filter>Internal Dependencies\Resource Files</Filter>
+      <Filter>Dependencies\FFmpeg</Filter>
     </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md" />
   </ItemGroup>
 </Project>
