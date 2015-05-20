@@ -27,7 +27,7 @@
  *
  */
 
-#include "Dependencies/FFMPEG/libavutil/avconfig.h"
+#include "..\Dependencies/FFMPEG/libavutil/avconfig.h"
 #include "version.h"
 
 #define AVPALETTE_SIZE 1024

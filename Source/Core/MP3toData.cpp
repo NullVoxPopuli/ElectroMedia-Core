@@ -6,9 +6,9 @@
 
 extern "C" 
 {
-#include "Dependencies\FFMPEG\libavcodec\avcodec.h"
-#include "Dependencies\FFMPEG\libavformat\avformat.h"
-#include "Dependencies\FFMPEG\libswscale\swscale.h"
+#include "..\Dependencies\FFMPEG\libavcodec\avcodec.h"
+#include "..\Dependencies\FFMPEG\libavformat\avformat.h"
+#include "..\Dependencies\FFMPEG\libswscale\swscale.h"
 }
 
 // THIS FILE IS DEDICATED TO WORKING WITH FFTW3

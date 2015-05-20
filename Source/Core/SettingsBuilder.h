@@ -3,7 +3,7 @@
 #include "EMCModes.h"
 #include "ConfigurationFileFields.h"
 #include "AnalyzerFactory.h"
-#include "Dependencies\json\json.h"
+#include "../Dependencies\json\json.h"
 
 #ifndef EMC_SettingsBuilder_H_
 #define EMC_SettingsBuilder_H_

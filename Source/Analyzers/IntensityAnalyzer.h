@@ -1,5 +1,5 @@
-#include "stdafx.h"
-#include "Analyzer.h"
+#include "../Core/stdafx.h"
+#include "../Core/Analyzer.h"
 
 #ifndef EMC_IntensityAnalyzer_H_
 #define EMC_IntensityAnalyzer_H_

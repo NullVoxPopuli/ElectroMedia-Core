@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "../Core/stdafx.h"
 #include "FeatureExtractionAnalyzer.h"
 
 FeatureExtractionAnalyzer::FeatureExtractionAnalyzer(int lower_bound, int upper_bound, int resolution)

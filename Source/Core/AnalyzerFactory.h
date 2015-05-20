@@ -1,8 +1,8 @@
 #include "stdafx.h"
 #include "Analyzer.h"
-#include "HillEffectAnalyzer.h"
-#include "FeatureExtractionAnalyzer.h"
-#include "IntensityAnalyzer.h"
+#include "..\Analyzers\HillEffectAnalyzer.h"
+#include "..\Analyzers\FeatureExtractionAnalyzer.h"
+#include "..\Analyzers\IntensityAnalyzer.h"
 
 #ifndef EMC_AnalyzerFactory_H_
 #define EMC_AnalyzerFactory_H_

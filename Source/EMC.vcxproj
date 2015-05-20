@@ -14,7 +14,7 @@
     <ProjectGuid>{CD652CE5-58AE-49C9-AB2B-B8A539846975}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>EMC</RootNamespace>
-    <ProjectName>EMC</ProjectName>
+    <ProjectName>ElectroMedia</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -84,11 +84,11 @@
     <Text Include="ReadMe.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AnalyzerFactory.h" />
-    <ClInclude Include="CoreMath.h" />
-    <ClInclude Include="ConfigurationFileFields.h" />
-    <ClInclude Include="SettingsBuilder.h" />
-    <ClInclude Include="Constants.h" />
+    <ClInclude Include="Core\AnalyzerFactory.h" />
+    <ClInclude Include="Core\CoreMath.h" />
+    <ClInclude Include="Core\ConfigurationFileFields.h" />
+    <ClInclude Include="Core\SettingsBuilder.h" />
+    <ClInclude Include="Core\Constants.h" />
     <ClInclude Include="Dependencies\boost\assert.hpp" />
     <ClInclude Include="Dependencies\boost\checked_delete.hpp" />
     <ClInclude Include="Dependencies\boost\config.hpp" />
@@ -453,38 +453,38 @@
     <ClInclude Include="dev\include\libswresample\version.h" />
     <ClInclude Include="dev\include\libswscale\swscale.h" />
     <ClInclude Include="dev\include\libswscale\version.h" />
-    <ClInclude Include="EmcCore.h" />
-    <ClInclude Include="EmcSettings.h" />
-    <ClInclude Include="FFmpegReturnValues.h" />
-    <ClInclude Include="HillEffectAnalyzer.h" />
-    <ClInclude Include="IntensityAnalyzer.h" />
-    <ClInclude Include="NoteNames.h" />
-    <ClInclude Include="EMCModes.h" />
-    <ClInclude Include="FeatureExtractionAnalyzer.h" />
-    <ClInclude Include="ArduinoReadableFileWriter.h" />
+    <ClInclude Include="Core\EmcCore.h" />
+    <ClInclude Include="Core\EmcSettings.h" />
+    <ClInclude Include="Core\FFmpegReturnValues.h" />
+    <ClInclude Include="Analyzers\HillEffectAnalyzer.h" />
+    <ClInclude Include="Analyzers\IntensityAnalyzer.h" />
+    <ClInclude Include="Core\NoteNames.h" />
+    <ClInclude Include="Core\EMCModes.h" />
+    <ClInclude Include="Analyzers\FeatureExtractionAnalyzer.h" />
+    <ClInclude Include="Core\ArduinoReadableFileWriter.h" />
     <ClInclude Include="MP3toData.h" />
-    <ClInclude Include="fftw3.h" />
-    <ClInclude Include="MusicFileOperations.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="Analyzer.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Core\fftw3.h" />
+    <ClInclude Include="Core\MusicFileOperations.h" />
+    <ClInclude Include="Core\resource.h" />
+    <ClInclude Include="Core\Analyzer.h" />
+    <ClInclude Include="Core\stdafx.h" />
+    <ClInclude Include="Core\targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AnalyzerFactory.cpp" />
-    <ClCompile Include="CoreMath.cpp" />
-    <ClCompile Include="SettingsBuilder.cpp" />
+    <ClCompile Include="Core\AnalyzerFactory.cpp" />
+    <ClCompile Include="Core\CoreMath.cpp" />
+    <ClCompile Include="Core\SettingsBuilder.cpp" />
     <ClCompile Include="Dependencies\jsoncpp.cpp" />
-    <ClCompile Include="EmcCore.cpp" />
-    <ClCompile Include="FeatureExtractionAnalyzer.cpp" />
-    <ClCompile Include="ArduinoReadableFileWriter.cpp" />
-    <ClCompile Include="HillEffectAnalyzer.cpp" />
-    <ClCompile Include="IntensityAnalyzer.cpp" />
-    <ClCompile Include="MP3toData.cpp" />
-    <ClCompile Include="EntryPoint.cpp" />
-    <ClCompile Include="MusicFileOperations.cpp" />
-    <ClCompile Include="Analyzer.cpp" />
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="Core\EmcCore.cpp" />
+    <ClCompile Include="Analyzers\FeatureExtractionAnalyzer.cpp" />
+    <ClCompile Include="Core\ArduinoReadableFileWriter.cpp" />
+    <ClCompile Include="Analyzers\HillEffectAnalyzer.cpp" />
+    <ClCompile Include="Analyzers\IntensityAnalyzer.cpp" />
+    <ClCompile Include="Core\MP3toData.cpp" />
+    <ClCompile Include="Core\EntryPoint.cpp" />
+    <ClCompile Include="Core\MusicFileOperations.cpp" />
+    <ClCompile Include="Core\Analyzer.cpp" />
+    <ClCompile Include="Core\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
