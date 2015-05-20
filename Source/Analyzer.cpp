@@ -33,11 +33,38 @@ Analyzer::Analyzer(double lower_frequency, double upper_frequency, int resolutio
 
 Analyzer::~Analyzer() { }
 
-void Analyzer::Analyze(vector<double> spectral_data)
+void Analyzer::Analyze(AudioFileData audio_data)
 {
+	// Settings
+	auto window_size = Settings.window_size_;
+	auto window_shift = Settings.window_shift_amount_;
 
+	DataSet pre_process_data = DataSet();
+	vector<char>::const_iterator first, last;
+	auto sweeps = (unsigned int)0;
+
+	// For FFTW 
+	auto working_double_array = (double*)fftw_malloc(sizeof(double) * window_size);
+	auto complex_results = (fftw_complex*)fftw_malloc(sizeof(fftw_complex) * window_size);
+	auto new_plan = fftw_plan_dft_r2c_1d(window_size, working_double_array, complex_results, FFTW_MEASURE);
+
+	// Loop through everything
+	while (((sweeps++)*window_shift + window_size) < audio_data->size())
+	{
+		first = audio_data->begin() + sweeps * window_shift;
+		last = audio_data->begin() + sweeps * window_shift + window_size;
+
+		vector<double> windowed_subvector(first, last);
+		pre_process_data = std::make_shared<vector<double>>(windowed_subvector);
+
+		auto dataFromFFT = MusicFileOperations::PrepareAndExecuteFFT(pre_process_data, new_plan, working_double_array, complex_results);
+	}
+
+	fftw_destroy_plan(new_plan);
+	fftw_free(working_double_array);
+	fftw_free(complex_results);
+	fftw_cleanup();
 }
-
 
 // BASE
 // convertToBits(double*, int)
@@ -129,7 +156,7 @@ std::string Analyzer::BigEndianConvert(dynamic_bitset<>& processed_bits)
 {
 	auto output_string = (std::string)"";
 
-	for (int bit = 0; bit < processed_bits.size(); bit++)
+	for (auto bit = 0; bit < processed_bits.size(); bit++)
     {
 		output_string.append(CheckBit(processed_bits[bit]));
     }

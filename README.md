@@ -1,10 +1,10 @@
 #ElectroMedia Core (EMC)
 
-## Preface
-This is a basic version of the ElectroMedia Core without new functionalities. This is Pre-Alpha and I'm currently heavily reworking the program flow, so it is not stable at all at the moment.
+## Pre-Alpha Release 1
+Pre-Alpha Release 1 is the first in a series of releases that will lead to Alpha Release 1 in August. This release is primarily concerned with incorporating GoogleTest, improving performance, and adding more functionality to the Analyzer suite.
 
 ## Capabilities of EMC
-An analysis suite in C++ dedicated to decoding signals within music files.
+ElectroMedia is a software package which is capable of taking audio files (MP3 only at the moment, more to come) and running any number of analyses in C++. Out of the box, it will be able to determine chord sequences, sound intensity, note patterns (such as the signature "wub-wub" audio modulation which characterizes Dubstep) and much more.
 
 ## Contributing
 * Fork EMC-Core to a repository of your own
@@ -12,6 +12,7 @@ An analysis suite in C++ dedicated to decoding signals within music files.
 * Download [the dependencies suite for EMC-Core](http://www.neuravion.io/file.axd?file=/EMC/EMC%20Requirements.zip "EMC-Core Dependencies") and unzip to the folder containing your executable
 
 ## Changelog
+* **v0.2.0.0** -- **Pre-Alpha Release 1**. Completed transition to the new EmcCore structure. FFT analysis is still part of the MusicFileOperations static class, but the Analyzers are in charge of their own behavior now. Goals now are to flesh out the Analyzer behavior to make the system more robust. Part of this Pre-Alpha Release is to also incorporate the GoogleTest framework. I will also be working heavily on performance enhancements (stack vs. heap memory for song data and the like, algorithm performance, et cetera).
 * **v0.1.9.7** -- Fleshed out more with the analyzers. Going to postpone the Analyzer threading until Pre Alpha 2 (v0.3.0.0). All that remains at the moment for Pre Alpha 1 (v0.2.0.0) is to make ConvertMp3ToArf to return a vector of spectral data and have the Analyzers do their thing in Analyzer::Analyze.
 * **v0.1.9.6** -- Changed the way that EMC handles Settings with config.json. Now, EMC has a global singleton "Settings" which is loaded into memory by the "SettingsBuilder" (formerly ConfigurationHandler). Further, major improvements have been added to the structure of EMC in preparation for the addition of the Analyzer package.
 * **v0.1.9.5** -- Major improvements to nomenclature. Changed many variable names and header guards to fit Google's C++ Style Guide. Also fixed up header inclusions and removed vestigial FrequencyMaximum class.

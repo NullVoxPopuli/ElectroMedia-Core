@@ -38,11 +38,11 @@ void EmcCore::AddAnalyzer(Analyzer* analyzer)
 
 void EmcCore::StartAnalyses()
 {
-	vector<double> spectral_data; // Get from FFT
+	auto song_data = MusicFileOperations::GetDataFromMP3();
 
-	auto analysis = [spectral_data](std::shared_ptr<Analyzer*> analyzer)
+	auto analysis = [song_data](std::shared_ptr<Analyzer*> analyzer)
 	{
-		(*analyzer)->Analyze(spectral_data);
+		(*analyzer)->Analyze(song_data);
 	};
 
 	// Spin off a thread for each of the analyses
@@ -52,7 +52,6 @@ void EmcCore::StartAnalyses()
 // Decode Workflow
 void EmcCore::Decode()
 {
-	MusicFileOperations::ConvertMP3ToARF();
 	StartAnalyses();
 }
 

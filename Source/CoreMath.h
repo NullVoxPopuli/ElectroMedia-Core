@@ -3,7 +3,7 @@
 #ifndef EMC_CoreMath_H_
 #define EMC_CoreMath_H_
 
-static class CoreMath
+class CoreMath
 {
 public:
 

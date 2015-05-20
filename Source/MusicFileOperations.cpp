@@ -19,55 +19,10 @@ MusicFileOperations::MP3FileData MusicFileOperations::GetDataFromMP3()
 	return data_from_file;
 }
 
-void MusicFileOperations::ConvertMP3ToARF()
-{
-	auto data_from_file = MusicFileOperations::GetDataFromMP3();
-
-    // preProcessData is an empty integer array that is used to receive data via memcpy.
-    // It is rewritten in every loop, whereas dataFromFile is constant.
-    DataSet preProcessData = DataSet();
-    vector<char>::const_iterator first, last;
-	auto sweeps = -1;
-
-	auto window_size = Settings.window_size_;
-	auto window_shift = Settings.window_shift_amount_;
-
-
-    // FFT variables
-	// MOST of this should be refactored into LinearAnalyzer
-    auto workingDoubleArray_ = (double*)fftw_malloc(sizeof(double) * window_size);
-	auto complexResults = (fftw_complex*)fftw_malloc(sizeof(fftw_complex) * window_size);
-	auto new_plan = fftw_plan_dft_r2c_1d(window_size, workingDoubleArray_, complexResults, FFTW_MEASURE);
-
-	CoreMath::Debug("Converting \"" + EmcSettings::GetInstance().song_filename_ + "\" to Arduino Readable File");
-	while (((++sweeps)*window_shift + window_size) < data_from_file->size())
-    {
-        // Copy out the data from the AudioFileData source into a DataSet
-		first = data_from_file->begin() + sweeps*window_shift;
-		last = data_from_file->begin() + sweeps*window_shift + window_size;
-        vector<double> windowedSubvector(first, last);
-        preProcessData = std::make_shared<vector<double>>(windowedSubvector);
-
-        // Call FFT
-        auto dataFromFFT = PrepareAndExecuteFFT(preProcessData, new_plan, workingDoubleArray_, complexResults);
-        //arfile->Write(dataFromFFT);
-    }
-    CoreMath::Debug("Process complete.");
-    
-    // Cleanup
-    fftw_destroy_plan(new_plan);
-    fftw_free(workingDoubleArray_);
-    fftw_free(complexResults);
-    fftw_cleanup();
-    //arfile->Close();
-}
-
-// Should probably be moved into EmcCore
-
 
 void MusicFileOperations::CopyVectorToPointerArray(DataSet& vector_in, double* array_out)
 {
-    auto elements = 0;
+    auto elements = (unsigned int) 0;
 	auto dataSetIterator = vector_in->begin();
 
 	while (dataSetIterator != vector_in->end() && elements++ < vector_in->size())
@@ -103,7 +58,7 @@ long MusicFileOperations::CaptureFileData(AudioFileData& waveform_data)
         // If it exists, push it into the dataOut array
 		if (data_file_stream)
         {
-			waveform_data->push_back(double(c));
+			waveform_data->push_back(c);
 			++counted_points;
         }
     }
@@ -132,7 +87,7 @@ DataSet MusicFileOperations::ExecuteFastFourierTransform(DataSet& data, fftw_pla
 	auto data_out = std::make_shared<vector<double>>(results_vector);
 
     auto frequency = 0.0;
-    for(int i=0; i < 180; i++)
+    for(int i=0; i < 180; ++i)
     {
 		frequency = double(sqrt(complex_results[i][0] * complex_results[i][0] + complex_results[i][1] * complex_results[i][1]));
         data_out->push_back( frequency );
