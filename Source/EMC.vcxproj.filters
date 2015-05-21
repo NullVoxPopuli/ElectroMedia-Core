@@ -1116,6 +1116,12 @@
     <ClInclude Include="Core\MP3toData.h">
       <Filter>Core\Headers</Filter>
     </ClInclude>
+    <ClInclude Include="Analyzers\Pattern\MeterAnalyzer.h">
+      <Filter>Analyzers\Pattern\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Analyzers\Pattern\TimeSignatureAnalyzer.h">
+      <Filter>Analyzers\Pattern\Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\ArduinoReadableFileWriter.cpp">
@@ -1164,6 +1170,12 @@
       <Filter>Analyzers\Pattern</Filter>
     </ClCompile>
     <ClCompile Include="Analyzers\Pattern\PatternAnalyzer.cpp">
+      <Filter>Analyzers\Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="Analyzers\Pattern\MeterAnalyzer.cpp">
+      <Filter>Analyzers\Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="Analyzers\Pattern\TimeSignatureAnalyzer.cpp">
       <Filter>Analyzers\Pattern</Filter>
     </ClCompile>
   </ItemGroup>

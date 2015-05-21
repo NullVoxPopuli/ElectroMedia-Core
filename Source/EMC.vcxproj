@@ -83,8 +83,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Analyzers\Linear\LinearAnalyzer.h" />
+    <ClInclude Include="Analyzers\Pattern\MeterAnalyzer.h" />
     <ClInclude Include="Analyzers\Pattern\PatternAnalyzer.h" />
     <ClInclude Include="Analyzers\Base\AnalyzerFactory.h" />
+    <ClInclude Include="Analyzers\Pattern\TimeSignatureAnalyzer.h" />
     <ClInclude Include="Core\CoreMath.h" />
     <ClInclude Include="Core\ConfigurationFileFields.h" />
     <ClInclude Include="Core\fftw3.h" />
@@ -440,8 +442,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Analyzers\Linear\LinearAnalyzer.cpp" />
+    <ClCompile Include="Analyzers\Pattern\MeterAnalyzer.cpp" />
     <ClCompile Include="Analyzers\Pattern\PatternAnalyzer.cpp" />
     <ClCompile Include="Analyzers\Base\AnalyzerFactory.cpp" />
+    <ClCompile Include="Analyzers\Pattern\TimeSignatureAnalyzer.cpp" />
     <ClCompile Include="Core\CoreMath.cpp" />
     <ClCompile Include="Core\SettingsBuilder.cpp" />
     <ClCompile Include="Core\EmcCore.cpp" />
