@@ -19,14 +19,14 @@ public:
     // Overloaded write options; only double* variant is used to write legitimate ARFs
     void Write(std::string stringToWrite);
     void Write(int intToWrite);
-    void Write(DataSet& dataToWrite);
+	void Write(SpectralDataCollection& dataToWrite);
     void Close();
 
 private:
     // Internal function for dealing with whether or not to write as BYTE or std::string
     bool IsTextWritable();
-    void WriteDoubleInTextMode(DataSet& dataToWrite);
-    int CalculateDynamicNoiseFloor(DataSet& data);
+	void WriteDoubleInTextMode(SpectralDataCollection& dataToWrite);
+	int CalculateDynamicNoiseFloor(SpectralDataCollection& data);
 
     // Private variables
     std::ofstream arf_stream_;

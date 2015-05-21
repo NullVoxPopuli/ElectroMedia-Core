@@ -16,7 +16,7 @@ public:
 
 	void Run();
 	void StartAnalyses();
-	void AddAnalyzer(Analyzer* analyzer);
+	void AddAnalyzer(BaseAnalyzer* analyzer);
 
 protected:
 	void Decode();

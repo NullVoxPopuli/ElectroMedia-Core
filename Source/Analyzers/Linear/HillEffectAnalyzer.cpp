@@ -2,11 +2,11 @@
 #include "HillEffectAnalyzer.h"
 
 HillEffectAnalyzer::HillEffectAnalyzer(int lower_bound, int upper_bound, int resolution)
-	: Analyzer(lower_bound, upper_bound, resolution)
+	: LinearAnalyzer(lower_bound, upper_bound, resolution)
 {
 
 }
-
+// todo: replace with LinearAnalysis()
 dynamic_bitset<> HillEffectAnalyzer::EvaluateBits(UniqueDataSet& processedData, const int bitLength)
 {
 	double max_amplitude = -1, max_index = -1;

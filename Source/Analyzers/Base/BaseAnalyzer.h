@@ -1,22 +1,22 @@
-#include "stdafx.h"
+#include "../Core/stdafx.h"
 #include <sstream>
-#include "CoreMath.h"
-#include "MusicFileOperations.h"
-#include "ConfigurationFileFields.h"
+#include "../Core/CoreMath.h"
+#include "../Core/MusicFileOperations.h"
+#include "../Core/ConfigurationFileFields.h"
 
-#ifndef EMC_Analyzer_H_
-#define EMC_Analyzer_H_
+#ifndef EMC_BaseAnalyzer_H_
+#define EMC_BaseAnalyzer_H_
 
-class Analyzer
+class BaseAnalyzer
 {
 public:
     // Constructors and Destructors
-	Analyzer();
-	Analyzer(int lower_bound, int upper_bound);
-	Analyzer(int lower_bound, int upper_bound, int resolution);
-	Analyzer(double lower_frequency, double upper_frequency);
-	Analyzer(double lower_frequency, double upper_frequency, int resolution);
-	~Analyzer();
+	BaseAnalyzer();
+	BaseAnalyzer(int lower_bound, int upper_bound);
+	BaseAnalyzer(int lower_bound, int upper_bound, int resolution);
+	BaseAnalyzer(double lower_frequency, double upper_frequency);
+	BaseAnalyzer(double lower_frequency, double upper_frequency, int resolution);
+	~BaseAnalyzer();
 
     // Define lower and upper bounds (as indices) for this processor
     void SetBounds(const int lower, const int upper);

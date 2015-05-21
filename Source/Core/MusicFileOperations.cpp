@@ -20,7 +20,7 @@ MusicFileOperations::MP3FileData MusicFileOperations::GetDataFromMP3()
 }
 
 
-void MusicFileOperations::CopyVectorToPointerArray(DataSet& vector_in, double* array_out)
+void MusicFileOperations::CopyVectorToPointerArray(SpectralDataCollection& vector_in, double* array_out)
 {
     auto elements = (unsigned int) 0;
 	auto dataSetIterator = vector_in->begin();
@@ -72,7 +72,7 @@ long MusicFileOperations::CaptureFileData(AudioFileData& waveform_data)
 // ---
 // Interface with the FFTW FOSS library. Indirectly performs the Fast Fourier
 // Transform to the data set of length (int)
-DataSet MusicFileOperations::ExecuteFastFourierTransform(DataSet& data, fftw_plan& fft_plan, double* working_array, fftw_complex* complex_results)
+SpectralDataCollection MusicFileOperations::ExecuteFastFourierTransform(SpectralDataCollection& data, fftw_plan& fft_plan, double* working_array, fftw_complex* complex_results)
 {
     // Allocate memory for the fftw_complex array and working double*
     // Generate a plan for FFTW to execute
@@ -104,7 +104,7 @@ DataSet MusicFileOperations::ExecuteFastFourierTransform(DataSet& data, fftw_pla
 // value, and then normalizes the original data set based on that maximum.
 //
 // Performance: O(n)
-void MusicFileOperations::Normalize(DataSet& data)
+void MusicFileOperations::Normalize(SpectralDataCollection& data)
 {
     auto max_value = *std::max_element(data->begin(), data->end());
 
@@ -126,7 +126,7 @@ double MusicFileOperations::GetHanningMultiplier(int index_at)
 // Immediately normalizes the data after the hanning window is applied.
 //
 // Performance: O(n)
-void MusicFileOperations::ApplyHanningWindow(DataSet& data)
+void MusicFileOperations::ApplyHanningWindow(SpectralDataCollection& data)
 {
     auto index = int(0);
     for (DataSetIterator it = data->begin(); it != data->end(); ++it)
@@ -141,7 +141,7 @@ void MusicFileOperations::ApplyHanningWindow(DataSet& data)
 // ---
 // Execute the FFT, convert the results from the complex frequency domain to the
 // frequency-vs-time spectral domain and then save the results into a debug file.
-DataSet MusicFileOperations::PrepareAndExecuteFFT(DataSet& data, fftw_plan& fft_plan, double* working_array, fftw_complex* complex_results)
+SpectralDataCollection MusicFileOperations::PrepareAndExecuteFFT(SpectralDataCollection& data, fftw_plan& fft_plan, double* working_array, fftw_complex* complex_results)
 {
 	auto maxFrequency = CoreMath::ConvertFrequencyToInt(Settings.maximum_frequency_accounted_);
 

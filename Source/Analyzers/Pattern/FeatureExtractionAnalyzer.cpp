@@ -2,7 +2,7 @@
 #include "FeatureExtractionAnalyzer.h"
 
 FeatureExtractionAnalyzer::FeatureExtractionAnalyzer(int lower_bound, int upper_bound, int resolution)
-	: Analyzer(lower_bound, upper_bound, resolution)
+	: PatternAnalyzer(lower_bound, upper_bound, resolution)
 {
 
 }

@@ -55,7 +55,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProgramFiles)\boost;$(ProjectDir)\Source\Dependencies;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProgramFiles)\boost;$(ProjectDir)\Source\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -82,7 +82,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Core\AnalyzerFactory.h" />
+    <ClInclude Include="Analyzers\Linear\LinearAnalyzer.h" />
+    <ClInclude Include="Analyzers\Pattern\PatternAnalyzer.h" />
+    <ClInclude Include="Analyzers\Base\AnalyzerFactory.h" />
     <ClInclude Include="Core\CoreMath.h" />
     <ClInclude Include="Core\ConfigurationFileFields.h" />
     <ClInclude Include="Core\fftw3.h" />
@@ -91,11 +93,11 @@
     <ClInclude Include="Core\EmcCore.h" />
     <ClInclude Include="Core\EmcSettings.h" />
     <ClInclude Include="Core\FFmpegReturnValues.h" />
-    <ClInclude Include="Analyzers\HillEffectAnalyzer.h" />
-    <ClInclude Include="Analyzers\IntensityAnalyzer.h" />
+    <ClInclude Include="Analyzers\Linear\HillEffectAnalyzer.h" />
+    <ClInclude Include="Analyzers\Linear\IntensityAnalyzer.h" />
     <ClInclude Include="Core\NoteNames.h" />
     <ClInclude Include="Core\EMCModes.h" />
-    <ClInclude Include="Analyzers\FeatureExtractionAnalyzer.h" />
+    <ClInclude Include="Analyzers\Pattern\FeatureExtractionAnalyzer.h" />
     <ClInclude Include="Core\ArduinoReadableFileWriter.h" />
     <ClInclude Include="Dependencies\boost\assert.hpp" />
     <ClInclude Include="Dependencies\boost\checked_delete.hpp" />
@@ -430,25 +432,27 @@
     <ClInclude Include="dev\include\libpostproc\version.h" />
     <ClInclude Include="dev\include\libswresample\version.h" />
     <ClInclude Include="dev\include\libswscale\version.h" />
-    <ClInclude Include="MP3toData.h" />
+    <ClInclude Include="Core\MP3toData.h" />
     <ClInclude Include="Core\MusicFileOperations.h" />
-    <ClInclude Include="Core\Analyzer.h" />
+    <ClInclude Include="Analyzers\Base\BaseAnalyzer.h" />
     <ClInclude Include="Core\stdafx.h" />
     <ClInclude Include="Core\targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Core\AnalyzerFactory.cpp" />
+    <ClCompile Include="Analyzers\Linear\LinearAnalyzer.cpp" />
+    <ClCompile Include="Analyzers\Pattern\PatternAnalyzer.cpp" />
+    <ClCompile Include="Analyzers\Base\AnalyzerFactory.cpp" />
     <ClCompile Include="Core\CoreMath.cpp" />
     <ClCompile Include="Core\SettingsBuilder.cpp" />
     <ClCompile Include="Core\EmcCore.cpp" />
-    <ClCompile Include="Analyzers\FeatureExtractionAnalyzer.cpp" />
+    <ClCompile Include="Analyzers\Pattern\FeatureExtractionAnalyzer.cpp" />
     <ClCompile Include="Core\ArduinoReadableFileWriter.cpp" />
-    <ClCompile Include="Analyzers\HillEffectAnalyzer.cpp" />
-    <ClCompile Include="Analyzers\IntensityAnalyzer.cpp" />
+    <ClCompile Include="Analyzers\Linear\HillEffectAnalyzer.cpp" />
+    <ClCompile Include="Analyzers\Linear\IntensityAnalyzer.cpp" />
     <ClCompile Include="Core\MP3toData.cpp" />
     <ClCompile Include="Core\EntryPoint.cpp" />
     <ClCompile Include="Core\MusicFileOperations.cpp" />
-    <ClCompile Include="Core\Analyzer.cpp" />
+    <ClCompile Include="Analyzers\Base\BaseAnalyzer.cpp" />
     <ClCompile Include="Core\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

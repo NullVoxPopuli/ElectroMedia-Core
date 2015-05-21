@@ -87,7 +87,7 @@ void ArduinoReadableFileWriter::Write(int int_to_write)
 // ---
 // Deciphers the data and transforms it into byte format; writes bytes to the output file
 // [WIP]
-void ArduinoReadableFileWriter::Write(DataSet& data_to_write)
+void ArduinoReadableFileWriter::Write(SpectralDataCollection& data_to_write)
 {
     if(!arf_stream_.is_open())
     {
@@ -114,14 +114,14 @@ void ArduinoReadableFileWriter::Write(DataSet& data_to_write)
     //}
 }
 
-int ArduinoReadableFileWriter::CalculateDynamicNoiseFloor(DataSet& data)
+int ArduinoReadableFileWriter::CalculateDynamicNoiseFloor(SpectralDataCollection& data)
 {
     auto pre_noise_floor_maximum = *std::max_element(data->begin(), data->end());
 
 	return int(pre_noise_floor_maximum * (double(Settings.noise_floor_percentage_) / 100));
 }
 
-void ArduinoReadableFileWriter::WriteDoubleInTextMode(DataSet& data_to_write)
+void ArduinoReadableFileWriter::WriteDoubleInTextMode(SpectralDataCollection& data_to_write)
 {
 	auto dynamic_noise_floor = Settings.noise_floor_percentage_;
 

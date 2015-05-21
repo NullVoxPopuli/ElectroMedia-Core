@@ -1,10 +1,10 @@
 #include "../Core/stdafx.h"
-#include "../Core/Analyzer.h"
+#include "LinearAnalyzer.h"
 
 #ifndef EMC_IntensityAnalyzer_H_
 #define EMC_IntensityAnalyzer_H_
 
-class IntensityAnalyzer : public Analyzer
+class IntensityAnalyzer : public LinearAnalyzer
 {
 public:
 	IntensityAnalyzer(int lower_bound, int upper_bound, int resolution);

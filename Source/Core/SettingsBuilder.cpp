@@ -16,19 +16,19 @@ void SettingsBuilder::Load()
 	reader.parse(in, decoded_json);
 
 	// Decode "mode"
-	if (JsonString("mode").Equals("write"))
+	if (ConfigString("mode").Equals("write"))
 	{
 		Settings.emc_mode_ = EMC_Mode::Decode;
 	}
 
-	Settings.song_filename_ = JsonString("filename");
-	Settings.noise_floor_percentage_ = JsonInt("noise_floor_amplitude");
-	Settings.window_size_ = JsonInt("window_size");
-	Settings.window_shift_amount_ = JsonInt("window_shift_size");
-	Settings.maximum_frequency_accounted_ = JsonDouble("max_frequency");
+	Settings.song_filename_ = ConfigString("filename");
+	Settings.noise_floor_percentage_ = ConfigInt("noise_floor_amplitude");
+	Settings.window_size_ = ConfigInt("window_size");
+	Settings.window_shift_amount_ = ConfigInt("window_shift_size");
+	Settings.maximum_frequency_accounted_ = ConfigDouble("max_frequency");
 
 	// Decode Endianness
-	if (JsonString("endianness").Equals("little"))
+	if (ConfigString("endianness").Equals("little"))
 	{
 		Settings.endianness_of_output_ = Endianness::LittleEndian;
 	}
@@ -48,7 +48,7 @@ SettingsBuilder::AnalyzerCollection* SettingsBuilder::CreateAnalyzers()
 	// Each loop corresponds to a subnode in the "algorithms" node
 	while (it != decoded_json["Analyzers"].end())
 	{
-		auto new_analyzer = std::make_shared<Analyzer*>(AnalyzerFactory::Create((*it)["type"].asString()));
+		auto new_analyzer = std::make_shared<BaseAnalyzer*>(AnalyzerFactory::Create((*it)["type"].asString()));
 		analyzers->push_back(new_analyzer);
 	}
 	

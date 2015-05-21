@@ -4,9 +4,6 @@
     <Filter Include="Analyzers">
       <UniqueIdentifier>{6c085062-6565-497e-9174-75468b3efa49}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Analyzers\Headers">
-      <UniqueIdentifier>{3a83bc3a-6505-4d49-ae57-952cb0bf3b0a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Core">
       <UniqueIdentifier>{5340d457-7d51-48bf-99bc-30c04ffb5982}</UniqueIdentifier>
     </Filter>
@@ -34,11 +31,26 @@
     <Filter Include="Dependencies\FFmpeg">
       <UniqueIdentifier>{ea3d0412-80d8-41c9-b62a-6b5f57e396a3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Analyzers\Linear">
+      <UniqueIdentifier>{c7e3675b-073f-4a39-9719-96fe123f48c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Analyzers\Pattern">
+      <UniqueIdentifier>{edf24cca-8970-4770-9b31-a6a5e957a4a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Analyzers\Linear\Headers">
+      <UniqueIdentifier>{3a83bc3a-6505-4d49-ae57-952cb0bf3b0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Analyzers\Pattern\Headers">
+      <UniqueIdentifier>{aba1219f-97c0-4b7a-a660-d867320c6304}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Analyzers\Base">
+      <UniqueIdentifier>{9c78e2a3-9e8e-4d04-92fe-1f7f59dc2555}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Analyzers\Base\Headers">
+      <UniqueIdentifier>{13b65128-dcd1-46fc-95a6-186de99d15e1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Core\Analyzer.h">
-      <Filter>Core\Headers</Filter>
-    </ClInclude>
     <ClInclude Include="Core\ArduinoReadableFileWriter.h">
       <Filter>Core\Headers</Filter>
     </ClInclude>
@@ -51,17 +63,8 @@
     <ClInclude Include="Core\EmcSettings.h">
       <Filter>Core\Headers</Filter>
     </ClInclude>
-    <ClInclude Include="MP3toData.h">
-      <Filter>Core\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Analyzers\HillEffectAnalyzer.h">
-      <Filter>Analyzers\Headers</Filter>
-    </ClInclude>
     <ClInclude Include="Core\MusicFileOperations.h">
       <Filter>Core\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Analyzers\IntensityAnalyzer.h">
-      <Filter>Analyzers\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Core\stdafx.h">
       <Filter>Core\Headers</Filter>
@@ -70,9 +73,6 @@
       <Filter>Core\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Core\ConfigurationFileFields.h">
-      <Filter>Helpers\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\AnalyzerFactory.h">
       <Filter>Helpers\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Core\Constants.h">
@@ -1092,14 +1092,32 @@
     <ClInclude Include="dev\include\libavutil\lzo.h">
       <Filter>Dependencies\FFmpeg</Filter>
     </ClInclude>
-    <ClInclude Include="Analyzers\FeatureExtractionAnalyzer.h">
-      <Filter>Analyzers\Headers</Filter>
+    <ClInclude Include="Analyzers\Linear\HillEffectAnalyzer.h">
+      <Filter>Analyzers\Linear\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Analyzers\Linear\IntensityAnalyzer.h">
+      <Filter>Analyzers\Linear\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Analyzers\Linear\LinearAnalyzer.h">
+      <Filter>Analyzers\Linear\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Analyzers\Base\BaseAnalyzer.h">
+      <Filter>Analyzers\Base\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Analyzers\Base\AnalyzerFactory.h">
+      <Filter>Analyzers\Base\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Analyzers\Pattern\PatternAnalyzer.h">
+      <Filter>Analyzers\Pattern\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Analyzers\Pattern\FeatureExtractionAnalyzer.h">
+      <Filter>Analyzers\Pattern\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\MP3toData.h">
+      <Filter>Core\Headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Core\Analyzer.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
     <ClCompile Include="Core\ArduinoReadableFileWriter.cpp">
       <Filter>Core</Filter>
     </ClCompile>
@@ -1121,23 +1139,32 @@
     <ClCompile Include="Core\stdafx.cpp">
       <Filter>Core</Filter>
     </ClCompile>
-    <ClCompile Include="Core\AnalyzerFactory.cpp">
-      <Filter>Helpers</Filter>
-    </ClCompile>
     <ClCompile Include="Core\SettingsBuilder.cpp">
       <Filter>Helpers</Filter>
     </ClCompile>
-    <ClCompile Include="Analyzers\FeatureExtractionAnalyzer.cpp">
-      <Filter>Analyzers</Filter>
-    </ClCompile>
-    <ClCompile Include="Analyzers\HillEffectAnalyzer.cpp">
-      <Filter>Analyzers</Filter>
-    </ClCompile>
-    <ClCompile Include="Analyzers\IntensityAnalyzer.cpp">
-      <Filter>Analyzers</Filter>
-    </ClCompile>
     <ClCompile Include="Dependencies\jsoncpp.cpp">
       <Filter>Dependencies\JsonCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Analyzers\Linear\LinearAnalyzer.cpp">
+      <Filter>Analyzers\Linear</Filter>
+    </ClCompile>
+    <ClCompile Include="Analyzers\Linear\IntensityAnalyzer.cpp">
+      <Filter>Analyzers\Linear</Filter>
+    </ClCompile>
+    <ClCompile Include="Analyzers\Linear\HillEffectAnalyzer.cpp">
+      <Filter>Analyzers\Linear</Filter>
+    </ClCompile>
+    <ClCompile Include="Analyzers\Base\AnalyzerFactory.cpp">
+      <Filter>Analyzers\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Analyzers\Base\BaseAnalyzer.cpp">
+      <Filter>Analyzers\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Analyzers\Pattern\FeatureExtractionAnalyzer.cpp">
+      <Filter>Analyzers\Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="Analyzers\Pattern\PatternAnalyzer.cpp">
+      <Filter>Analyzers\Pattern</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

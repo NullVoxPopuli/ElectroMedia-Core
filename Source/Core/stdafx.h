@@ -30,5 +30,5 @@ using boost::dynamic_bitset;
 // TYPE DEFINITIONS
 typedef std::shared_ptr<vector<char>> AudioFileData;
 typedef std::unique_ptr<vector<double>> UniqueDataSet;
-typedef std::shared_ptr<vector<double>> DataSet;
+typedef std::shared_ptr<vector<double>> SpectralDataCollection;
 typedef vector<double>::iterator DataSetIterator;

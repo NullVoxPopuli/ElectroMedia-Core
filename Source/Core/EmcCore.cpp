@@ -31,16 +31,16 @@ void EmcCore::Run()
 	}
 }
 
-void EmcCore::AddAnalyzer(Analyzer* analyzer)
+void EmcCore::AddAnalyzer(BaseAnalyzer* analyzer)
 {
-	analyzer_collection_->push_back(std::make_shared<Analyzer*>(analyzer));
+	analyzer_collection_->push_back(std::make_shared<BaseAnalyzer*>(analyzer));
 }
 
 void EmcCore::StartAnalyses()
 {
 	auto song_data = MusicFileOperations::GetDataFromMP3();
 
-	auto analysis = [song_data](std::shared_ptr<Analyzer*> analyzer)
+	auto analysis = [song_data](std::shared_ptr<BaseAnalyzer*> analyzer)
 	{
 		(*analyzer)->Analyze(song_data);
 	};

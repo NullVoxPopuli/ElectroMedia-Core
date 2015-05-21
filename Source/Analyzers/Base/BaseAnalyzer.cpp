@@ -1,69 +1,40 @@
-#include "stdafx.h"
-#include "Constants.h"
-#include "Analyzer.h"
+#include "../Core/stdafx.h"
+#include "../Core/Constants.h"
+#include "BaseAnalyzer.h"
 
-// Analyzer Constructor
+// BaseAnalyzer Constructor
 // ---
 // ...
-Analyzer::Analyzer()
-	: Analyzer(0,0,1)
+BaseAnalyzer::BaseAnalyzer()
+	: BaseAnalyzer(0,0,1)
 { }
 
-Analyzer::Analyzer(int lower_bound, int upper_bound)
-	: Analyzer(lower_bound, upper_bound, 1)
+BaseAnalyzer::BaseAnalyzer(int lower_bound, int upper_bound)
+	: BaseAnalyzer(lower_bound, upper_bound, 1)
 { }
 
-Analyzer::Analyzer(int lower_bound, int upper_bound, int resolution)
+BaseAnalyzer::BaseAnalyzer(int lower_bound, int upper_bound, int resolution)
 	: lower_bound_(lower_bound),
 	  upper_bound_(upper_bound),
 	  bit_resolution_(resolution)
 { }
 
-Analyzer::Analyzer(double lower_frequency, double upper_frequency)
-	: Analyzer(lower_frequency, upper_frequency, 1)
+BaseAnalyzer::BaseAnalyzer(double lower_frequency, double upper_frequency)
+	: BaseAnalyzer(lower_frequency, upper_frequency, 1)
 {
 }
 
-Analyzer::Analyzer(double lower_frequency, double upper_frequency, int resolution)
+BaseAnalyzer::BaseAnalyzer(double lower_frequency, double upper_frequency, int resolution)
 	: bit_resolution_(resolution)
 {
 	lower_bound_ = CoreMath::ConvertFrequencyToInt(lower_frequency);
 	upper_bound_ = CoreMath::ConvertFrequencyToInt(upper_frequency);
 }
 
-Analyzer::~Analyzer() { }
+BaseAnalyzer::~BaseAnalyzer() { }
 
-void Analyzer::Analyze(AudioFileData audio_data)
+void BaseAnalyzer::Analyze(AudioFileData audio_data)
 {
-	// Settings
-	auto window_size = Settings.window_size_;
-	auto window_shift = Settings.window_shift_amount_;
-
-	DataSet pre_process_data = DataSet();
-	vector<char>::const_iterator first, last;
-	auto sweeps = (unsigned int)0;
-
-	// For FFTW 
-	auto working_double_array = (double*)fftw_malloc(sizeof(double) * window_size);
-	auto complex_results = (fftw_complex*)fftw_malloc(sizeof(fftw_complex) * window_size);
-	auto new_plan = fftw_plan_dft_r2c_1d(window_size, working_double_array, complex_results, FFTW_MEASURE);
-
-	// Loop through everything
-	while (((sweeps++)*window_shift + window_size) < audio_data->size())
-	{
-		first = audio_data->begin() + sweeps * window_shift;
-		last = audio_data->begin() + sweeps * window_shift + window_size;
-
-		vector<double> windowed_subvector(first, last);
-		pre_process_data = std::make_shared<vector<double>>(windowed_subvector);
-
-		auto dataFromFFT = MusicFileOperations::PrepareAndExecuteFFT(pre_process_data, new_plan, working_double_array, complex_results);
-	}
-
-	fftw_destroy_plan(new_plan);
-	fftw_free(working_double_array);
-	fftw_free(complex_results);
-	fftw_cleanup();
 }
 
 // BASE
@@ -76,7 +47,7 @@ void Analyzer::Analyze(AudioFileData audio_data)
 // 
 // Result is by default Big Endian, but this can be changed through config by
 // setting OUTPUT_IS_BIG_ENDIAN to false in "stdafx.h"
-std::string Analyzer::ConvertToBits(UniqueDataSet& data_to_convert, int noise_floor)
+std::string BaseAnalyzer::ConvertToBits(UniqueDataSet& data_to_convert, int noise_floor)
 {
 	PreProcessForConversion(data_to_convert);
 	ApplyNoiseFloor(data_to_convert, noise_floor);
@@ -92,7 +63,7 @@ std::string Analyzer::ConvertToBits(UniqueDataSet& data_to_convert, int noise_fl
 	return LittleEndianConvert(resulting_bits);
 }
 
-void Analyzer::PreProcessForConversion(UniqueDataSet& data_to_convert)
+void BaseAnalyzer::PreProcessForConversion(UniqueDataSet& data_to_convert)
 {
     // Nothing should really happen 
 }
@@ -107,7 +78,7 @@ double checkAgainstNoiseFloor(double frequency, int noise_floor)
     return frequency;
 }
 
-void Analyzer::ApplyNoiseFloor(UniqueDataSet& preprocessed_data, int noise_floor)
+void BaseAnalyzer::ApplyNoiseFloor(UniqueDataSet& preprocessed_data, int noise_floor)
 {
     // Replace with iterator
 	DataSetIterator it = preprocessed_data->begin();
@@ -118,7 +89,7 @@ void Analyzer::ApplyNoiseFloor(UniqueDataSet& preprocessed_data, int noise_floor
     }
 }
 
-dynamic_bitset<> Analyzer::EvaluateBits(UniqueDataSet& processed_data)
+dynamic_bitset<> BaseAnalyzer::EvaluateBits(UniqueDataSet& processed_data)
 {
 	auto bit_length = (int)floor(upper_bound_ - lower_bound_) / bit_resolution_;
     auto current_bit = (int) 0;
@@ -142,7 +113,7 @@ dynamic_bitset<> Analyzer::EvaluateBits(UniqueDataSet& processed_data)
 }
 
 
-std::string Analyzer::CheckBit(bool bit_to_check)
+std::string BaseAnalyzer::CheckBit(bool bit_to_check)
 {
 	if (bit_to_check)
     {
@@ -152,7 +123,7 @@ std::string Analyzer::CheckBit(bool bit_to_check)
     return "0";
 }
 
-std::string Analyzer::BigEndianConvert(dynamic_bitset<>& processed_bits)
+std::string BaseAnalyzer::BigEndianConvert(dynamic_bitset<>& processed_bits)
 {
 	auto output_string = (std::string)"";
 
@@ -164,7 +135,7 @@ std::string Analyzer::BigEndianConvert(dynamic_bitset<>& processed_bits)
 	return output_string;
 }
 
-std::string Analyzer::LittleEndianConvert(dynamic_bitset<>& processed_bits)
+std::string BaseAnalyzer::LittleEndianConvert(dynamic_bitset<>& processed_bits)
 {
     auto output_string = (std::string)"";
 

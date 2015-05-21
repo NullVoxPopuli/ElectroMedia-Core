@@ -13,6 +13,7 @@ ElectroMedia is a software package which is capable of taking audio files (MP3 o
 * Download [the dependencies suite for EMC-Core](http://www.neuravion.io/file.axd?file=/EMC/EMC%20Requirements.zip "EMC-Core Dependencies") and unzip to the folder containing your executable
 
 ## Changelog
+* **v0.2.0.3** -- Added Linear and Pattern Analyzer, changed some things in the directories to match the new patterns
 * **v0.2.0.2** -- More changes to directory structure with some improvements to the Solution Explorer view.
 * **v0.2.0.1** -- Changed directory structure to make a bit more sense.
 * **v0.2.0.0** -- **Pre-Alpha Release 1**. Completed transition to the new EmcCore structure. FFT analysis is still part of the MusicFileOperations static class, but the Analyzers are in charge of their own behavior now. Goals now are to flesh out the Analyzer behavior to make the system more robust. Part of this Pre-Alpha Release is to also incorporate the GoogleTest framework. I will also be working heavily on performance enhancements (stack vs. heap memory for song data and the like, algorithm performance, et cetera).
