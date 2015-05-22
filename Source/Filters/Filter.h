@@ -3,5 +3,5 @@
 class Filter
 {
 public:
-	virtual void ApplyFilter(UniqueDataSet preprocessed_data);
+	virtual void ApplyFilter(UniqueDataSet& data);
 };

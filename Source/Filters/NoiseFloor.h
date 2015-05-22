@@ -3,8 +3,8 @@
 
 class NoiseFloor : public Filter
 {
-	double CalculateNoiseFloor();// UniqueDataSe& data);
+	double CalculateNoiseFloor(UniqueDataSet& data);
 
 public:
-	void ApplyFilter(UniqueDataSet data) override;
+	void ApplyFilter(UniqueDataSet& data) override;
 };

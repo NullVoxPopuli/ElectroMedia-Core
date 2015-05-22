@@ -13,7 +13,7 @@ ElectroMedia is a software package which is capable of taking audio files (MP3 o
 * Download [the dependencies suite for EMC-Core](http://www.neuravion.io/file.axd?file=/EMC/EMC%20Requirements.zip "EMC-Core Dependencies") and unzip to the folder containing your executable
 
 ## Changelog
-* **v0.2.0.6** -- Added gloabally-accessible application_root_ variable in EmcSettings. Added Filters, working on Analysis object next.
+* **v0.2.0.6** -- Added gloabally-accessible application_root_ variable in EmcSettings. Added Filters, working on Processor class next.
 * **v0.2.0.5** -- Removed Legacy functionality from Analyzers in preparation for v0.2.1.0
 * **v0.2.0.4** -- Added Time Signature and Meter Analyzers as PatternAnalyzers. No implementation as of yet.
 * **v0.2.0.3** -- Added Linear and Pattern Analyzer, changed some things in the directories to match the new patterns
@@ -23,6 +23,3 @@ ElectroMedia is a software package which is capable of taking audio files (MP3 o
 * **v0.1.9.7** -- Fleshed out more with the analyzers. Going to postpone the Analyzer threading until Pre Alpha 2 (v0.3.0.0). All that remains at the moment for Pre Alpha 1 (v0.2.0.0) is to make ConvertMp3ToArf to return a vector of spectral data and have the Analyzers do their thing in Analyzer::Analyze.
 * **v0.1.9.6** -- Changed the way that EMC handles Settings with config.json. Now, EMC has a global singleton "Settings" which is loaded into memory by the "SettingsBuilder" (formerly ConfigurationHandler). Further, major improvements have been added to the structure of EMC in preparation for the addition of the Analyzer package.
 * **v0.1.9.5** -- Major improvements to nomenclature. Changed many variable names and header guards to fit Google's C++ Style Guide. Also fixed up header inclusions and removed vestigial FrequencyMaximum class.
-* **v0.1.9.4** -- Added enumerated Return values for FFmpeg function, added some QoL improvements to ConfigurationHandler and CoreMath for dealing with file extensions and the like. Started tearing apart the ConvertMP3ToARF stuff. Moved ReadARF to EmcCore.
-* **v0.1.9.3** -- Removed FrequencyRangeProfile completely in response to Issue #7 on Github.
-* **v0.1.9.2** -- Added validation to AnalyzerFactory in response to Issue #6 "AnalyzerFactory should be fleshed out more (e.g. Validation)"
