@@ -7,33 +7,33 @@ FeatureExtractionAnalyzer::FeatureExtractionAnalyzer(int lower_bound, int upper_
 
 }
 
-std::string FeatureExtractionAnalyzer::ConvertToBits(UniqueDataSet& processed_data, const int noise_floor)
-{
-	double values_of_notes[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-	auto note_type = (int) 0;
-	auto note_amplitude = (double) 0.0;
-
-	for (auto frequency_index = 0; frequency_index < upper_bound_; ++frequency_index)
-	{
-		note_amplitude = processed_data->at(frequency_index);
-		note_type = ToNote(CoreMath::ConvertIntToFrequency(frequency_index));
-		if (note_type == NoteName::NONE)
-		{
-			continue;
-		}
-		values_of_notes[note_type] += note_amplitude;
-	}
-
-	std::ostringstream buffer;
-	buffer << values_of_notes[0];
-
-	for (int note_index = 1; note_index < 12; note_index++)
-	{
-		buffer << ", " << values_of_notes[note_index];
-	}
-
-	return buffer.str();
-}
+//std::string FeatureExtractionAnalyzer::ConvertToBits(UniqueDataSet& processed_data, const int noise_floor)
+//{
+//	double values_of_notes[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+//	auto note_type = (int) 0;
+//	auto note_amplitude = (double) 0.0;
+//
+//	for (auto frequency_index = 0; frequency_index < upper_bound_; ++frequency_index)
+//	{
+//		note_amplitude = processed_data->at(frequency_index);
+//		note_type = ToNote(CoreMath::ConvertIntToFrequency(frequency_index));
+//		if (note_type == NoteName::NONE)
+//		{
+//			continue;
+//		}
+//		values_of_notes[note_type] += note_amplitude;
+//	}
+//
+//	std::ostringstream buffer;
+//	buffer << values_of_notes[0];
+//
+//	for (int note_index = 1; note_index < 12; note_index++)
+//	{
+//		buffer << ", " << values_of_notes[note_index];
+//	}
+//
+//	return buffer.str();
+//}
 
 NoteName FeatureExtractionAnalyzer::ToNote(double frequency)
 {

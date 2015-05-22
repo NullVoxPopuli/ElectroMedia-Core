@@ -10,7 +10,6 @@ class FeatureExtractionAnalyzer : public PatternAnalyzer
 {
 public:
 	FeatureExtractionAnalyzer(int lower_bound, int upper_bound, int resolution);
-	std::string ConvertToBits(UniqueDataSet& processed_data, int noise_floor);
 
 private:
 	NoteName ToNote(double frequency);
