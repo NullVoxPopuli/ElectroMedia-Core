@@ -1,4 +1,4 @@
-#include "../Core/stdafx.h"
+#include "../../Core/stdafx.h"
 #include "HillEffectAnalyzer.h"
 
 HillEffectAnalyzer::HillEffectAnalyzer(int lower_bound, int upper_bound, int resolution)

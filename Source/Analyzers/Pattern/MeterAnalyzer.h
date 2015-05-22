@@ -1,6 +1,6 @@
-#include "../Core/stdafx.h"
-#include "../Core/CoreMath.h"
-#include "../Core/NoteNames.h"
+#include "../../Core/stdafx.h"
+#include "../../Core/CoreMath.h"
+#include "../../Core/NoteNames.h"
 #include "PatternAnalyzer.h"
 
 #ifndef EMC_MeterAnalyzer_H_

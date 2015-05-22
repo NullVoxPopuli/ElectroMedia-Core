@@ -4,11 +4,11 @@
 #include "CoreMath.h"
 #include <sstream>
 
-extern "C" 
-{
-#include "..\Dependencies\FFMPEG\libavcodec\avcodec.h"
-#include "..\Dependencies\FFMPEG\libavformat\avformat.h"
-#include "..\Dependencies\FFMPEG\libswscale\swscale.h"
+extern "C" {
+#include <libavcodec/avcodec.h>
+#include <libavformat/avformat.h>
+#include <libswscale/swscale.h>
+#include <libavutil/avutil.h>
 }
 
 // THIS FILE IS DEDICATED TO WORKING WITH FFTW3
@@ -41,14 +41,14 @@ FFmpegReturnValue DecodeMusic()
 
     // open the file if it exists
 	if (avformat_open_input(&pFormatCtxt, mpeg_filename.c_str(), NULL, NULL) != 0)
-    { 
+    {
         CoreMath::Debug("No file found!\n");
 		return FFmpegReturnValue::NoFileFound;
     }
 
-    //Get Streams Info 
+    //Get Streams Info
     if(avformat_find_stream_info (pFormatCtxt,NULL) < 0)
-    { 
+    {
         return FFmpegReturnValue::NoStreamAvailable;
     }
     //Testing the transfer.
@@ -63,7 +63,7 @@ FFmpegReturnValue DecodeMusic()
 		}
 	}
 
-	aCodecCtxt = pFormatCtxt->streams[audio_stream]->codec; // opening decoder   
+	aCodecCtxt = pFormatCtxt->streams[audio_stream]->codec; // opening decoder
 	aCodec = avcodec_find_decoder(pFormatCtxt->streams[audio_stream]->codec->codec_id);
 
     if (!aCodec)
@@ -90,7 +90,7 @@ FFmpegReturnValue DecodeMusic()
     {
 		if (avPkt.stream_index == audio_stream)
         {
-            int check = 0; 
+            int check = 0;
             int result = avcodec_decode_audio4 (aCodecCtxt, decode_frame, &check, &avPkt);
             fwrite(decode_frame->data[0],1, decode_frame->linesize[0], outfile);
         }

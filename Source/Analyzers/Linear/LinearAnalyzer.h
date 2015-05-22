@@ -1,5 +1,5 @@
-#include "../Core/stdafx.h"
-#include "../Analyzers/Base/BaseAnalyzer.h"
+#include "../../Core/stdafx.h"
+#include "../Base/BaseAnalyzer.h"
 
 #ifndef	EMC_LinearAnalyzer_H_
 #define EMC_LinearAnalyzer_H_

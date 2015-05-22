@@ -1,4 +1,4 @@
-#include "../Core/stdafx.h"
+#include "../../Core/stdafx.h"
 #include "LinearAnalyzer.h"
 
 LinearAnalyzer::LinearAnalyzer(int lower_bound, int upper_bound, int resolution)
@@ -23,5 +23,4 @@ void LinearAnalyzer::Analyze(SharedAudioData audio_data)
 }
 
 void LinearAnalyzer::LinearAnalysis(SharedDataSet pre_process_data)
-{
-}
+{ }

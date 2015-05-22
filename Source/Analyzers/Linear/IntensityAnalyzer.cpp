@@ -1,4 +1,4 @@
-#include "../Core/stdafx.h"
+#include "../../Core/stdafx.h"
 #include "IntensityAnalyzer.h"
 
 IntensityAnalyzer::IntensityAnalyzer(int lower_bound, int upper_bound, int resolution)
