@@ -439,6 +439,9 @@
     <ClInclude Include="Analyzers\Base\BaseAnalyzer.h" />
     <ClInclude Include="Core\stdafx.h" />
     <ClInclude Include="Core\targetver.h" />
+    <ClInclude Include="Filters\Filter.h" />
+    <ClInclude Include="Filters\SimplifiedKalman.h" />
+    <ClInclude Include="Filters\NoiseFloor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Analyzers\Linear\LinearAnalyzer.cpp" />
@@ -457,6 +460,9 @@
     <ClCompile Include="Core\EntryPoint.cpp" />
     <ClCompile Include="Core\MusicFileOperations.cpp" />
     <ClCompile Include="Analyzers\Base\BaseAnalyzer.cpp" />
+    <ClCompile Include="Filters\Filter.cpp" />
+    <ClCompile Include="Filters\NoiseFloor.cpp" />
+    <ClCompile Include="Filters\SimplifiedKalman.cpp" />
     <ClCompile Include="Core\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

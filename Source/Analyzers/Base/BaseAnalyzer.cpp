@@ -31,20 +31,6 @@ BaseAnalyzer::BaseAnalyzer(double lower_frequency, double upper_frequency, int r
 	upper_bound_ = CoreMath::ConvertFrequencyToInt(upper_frequency);
 }
 
-BaseAnalyzer::~BaseAnalyzer() { }
-
 void BaseAnalyzer::Analyze(AudioFileData audio_data)
 {
-}
-
-void BaseAnalyzer::ApplyNoiseFloor(UniqueDataSet& preprocessed_data, int noise_floor)
-{
-	// Easy lambda for application of the noise floor
-	auto apply_noise_floor = [noise_floor](double& frequency)
-	{
-		frequency = (frequency < noise_floor) ? 0 : frequency;
-	};
-
-	// Apply the noise floor
-	std::for_each(preprocessed_data->begin(), preprocessed_data->end(), apply_noise_floor);
 }

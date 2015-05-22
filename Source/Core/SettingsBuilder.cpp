@@ -21,6 +21,8 @@ void SettingsBuilder::Load()
 		Settings.emc_mode_ = EMC_Mode::Decode;
 	}
 
+	Settings.application_root_ = configuration_directory_;
+
 	Settings.song_filename_ = ConfigString("filename");
 	Settings.noise_floor_percentage_ = ConfigInt("noise_floor_amplitude");
 	Settings.window_size_ = ConfigInt("window_size");

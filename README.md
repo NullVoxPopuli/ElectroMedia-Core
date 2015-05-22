@@ -13,6 +13,7 @@ ElectroMedia is a software package which is capable of taking audio files (MP3 o
 * Download [the dependencies suite for EMC-Core](http://www.neuravion.io/file.axd?file=/EMC/EMC%20Requirements.zip "EMC-Core Dependencies") and unzip to the folder containing your executable
 
 ## Changelog
+* **v0.2.0.6** -- Added gloabally-accessible application_root_ variable in EmcSettings. Added Filters, working on Analysis object next.
 * **v0.2.0.5** -- Removed Legacy functionality from Analyzers in preparation for v0.2.1.0
 * **v0.2.0.4** -- Added Time Signature and Meter Analyzers as PatternAnalyzers. No implementation as of yet.
 * **v0.2.0.3** -- Added Linear and Pattern Analyzer, changed some things in the directories to match the new patterns

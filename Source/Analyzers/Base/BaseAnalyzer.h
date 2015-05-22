@@ -19,13 +19,8 @@ public:
 	BaseAnalyzer(int lower_bound, int upper_bound, int resolution);
 	BaseAnalyzer(double lower_frequency, double upper_frequency);
 	BaseAnalyzer(double lower_frequency, double upper_frequency, int resolution);
-	~BaseAnalyzer();
 
 	virtual void Analyze(AudioFileData audio_data);
-
-protected:
-	// Deprecating...
-    virtual void ApplyNoiseFloor(UniqueDataSet& preprocessed_data, int noise_floor);
 };
 
 #endif

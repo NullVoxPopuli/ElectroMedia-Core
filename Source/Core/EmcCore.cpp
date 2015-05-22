@@ -58,7 +58,7 @@ void EmcCore::Decode()
 // Read Workflow
 void EmcCore::Read()
 {
-	auto arFileName = CoreMath::ChangeFileExtension(Settings.configuration_directory_, Settings.kArFileExtension);
+	auto arFileName = CoreMath::ChangeFileExtension(Settings.application_root_, Settings.kArFileExtension);
 
 	std::ifstream visualizationFile(arFileName);
 	if (visualizationFile.is_open())

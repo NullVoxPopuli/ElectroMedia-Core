@@ -32,11 +32,12 @@ public:
 	double maximum_frequency_accounted_ = 2000;
 	double temporal_shift_width_ = 0.02334;
 	double noise_floor_percentage_ = 30.0;
-	Endianness endianness_of_output_ = Endianness::BigEndian;
 	bool debug_mode_;
 
-	std::string configuration_directory_;
+	std::string application_root_;
 	std::string song_filename_;
+
+	Endianness endianness_of_output_ = Endianness::BigEndian;
 	EMC_Mode	emc_mode_;
 
 	void CalculateTemporalShiftWidth()
