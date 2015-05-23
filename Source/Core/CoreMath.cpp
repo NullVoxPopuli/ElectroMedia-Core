@@ -10,12 +10,12 @@
 // determined through the use of a calibration curve
 int CoreMath::ConvertFrequencyToInt(double frequency_bound)
 {
-	return int((frequency_bound - Settings.kBoundaryConversionOffset) / Settings.kBoundaryConversionScalar);
+	return int((frequency_bound - Constants::kBoundaryConversionOffset) / Constants::kBoundaryConversionScalar);
 }
 
 double CoreMath::ConvertIntToFrequency(int index)
 {
-	return int((index * Settings.kBoundaryConversionScalar + Settings.kBoundaryConversionOffset));
+	return int((index * Constants::kBoundaryConversionScalar + Constants::kBoundaryConversionOffset));
 }
 
 // int = calculateDynamicNoiseFloor(double*, int, int)
@@ -71,4 +71,12 @@ std::string CoreMath::GetFilenameWithoutExtension(std::string full_path)
 std::string CoreMath::ChangeFileExtension(std::string full_path, std::string new_extension)
 {
 	return CoreMath::GetFilenameWithoutExtension(full_path) + new_extension;
+}
+
+// double = hanningMultiplier(int, int)
+// ---
+// Returns an offset cosine wave of (int) width at a specific index
+double CoreMath::GetHanningMultiplier(int index_at)
+{
+	return 0.5 * (1 - cos(2 * 3.14 * index_at / (Settings.window_size_ - 1)));
 }

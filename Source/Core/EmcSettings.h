@@ -19,14 +19,6 @@ public:
 	EmcSettings(EmcSettings const&) = delete;
 	void operator=(EmcSettings const&) = delete;
 
-	const std::string kConfigurationFileName = "config.json";
-	const std::string kEmcFileExtension = ".emc";
-	const std::string kArFileExtension = ".arf";
-
-	const int kSongEndingPaddingSize = 8;
-	const double kBoundaryConversionScalar = 10.91;
-	const double kBoundaryConversionOffset = 7.33;
-
 	int window_size_ = 8192;
 	int window_shift_amount_ = 4096;
 	double maximum_frequency_accounted_ = 2000;

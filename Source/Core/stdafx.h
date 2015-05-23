@@ -20,15 +20,12 @@
 #include "boost\dynamic_bitset\dynamic_bitset.hpp"
 #include "boost\function\function0.hpp"
 
-// ENUMS
-const enum adjustmentType { ADJUSTMENT_TYPE_CHANGE_UPPER, ADJUSTMENT_TYPE_CHANGE_LOWER, ADJUSTMENT_TYPE_CENTER };
-
 // NAMESPACES
 using std::vector;
 using boost::dynamic_bitset;
 
 // TYPE DEFINITIONS
-typedef std::shared_ptr<vector<char>> AudioFileData;
+typedef std::shared_ptr<vector<char>>	AudioFileData;
 typedef std::unique_ptr<vector<double>> UniqueDataSet;
 typedef std::shared_ptr<vector<double>> SpectralDataCollection;
 typedef vector<double>::iterator DataSetIterator;

@@ -26,7 +26,7 @@ FFmpegReturnValue DecodeMusic()
     auto audio_stream = -1;
 	auto name = Settings.song_filename_;
 	auto mpeg_filename = Settings.application_root_ + name + ".mp3";
-	auto emc_filename = name + Settings.kEmcFileExtension;
+	auto emc_filename = name + Constants::kEmcFileExtension;
 
     AVCodec         *aCodec;
     AVPacket        avPkt;

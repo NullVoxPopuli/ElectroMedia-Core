@@ -34,3 +34,7 @@ BaseAnalyzer::BaseAnalyzer(double lower_frequency, double upper_frequency, int r
 void BaseAnalyzer::Analyze(AudioFileData audio_data)
 {
 }
+
+void BaseAnalyzer::Analyze(UniqueDataSet& audio_data)
+{
+}

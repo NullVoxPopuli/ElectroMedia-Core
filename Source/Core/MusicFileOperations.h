@@ -19,15 +19,15 @@ public:
 private:
 	// FFT PreProcessing
 	static void CopyVectorToPointerArray(SpectralDataCollection& vector_in, double* array_out);
-	static double GetHanningMultiplier(int index_at);
 	static void Normalize(SpectralDataCollection& data);
-	static void ApplyHanningWindow(SpectralDataCollection& data);
 
 	// Fast Fourier Transform
 	static SpectralDataCollection ExecuteFastFourierTransform(SpectralDataCollection& data, fftw_plan& fft_plan, double* working_array,
 		fftw_complex* complex_fft_results);
 
 	static long CaptureFileData(AudioFileData& waveform_data);
+
+protected:
 };
 
 #endif

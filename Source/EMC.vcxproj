@@ -439,9 +439,12 @@
     <ClInclude Include="Analyzers\Base\BaseAnalyzer.h" />
     <ClInclude Include="Core\stdafx.h" />
     <ClInclude Include="Core\targetver.h" />
-    <ClInclude Include="Filters\Filter.h" />
-    <ClInclude Include="Filters\SimplifiedKalman.h" />
-    <ClInclude Include="Filters\NoiseFloor.h" />
+    <ClInclude Include="Filters\Base\Filter.h" />
+    <ClInclude Include="Filters\Base\SimplifiedKalman.h" />
+    <ClInclude Include="Filters\Base\NoiseFloor.h" />
+    <ClInclude Include="Filters\Windows\HanningWindow.h" />
+    <ClInclude Include="Core\Processor.h" />
+    <ClInclude Include="Filters\Windows\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Analyzers\Linear\LinearAnalyzer.cpp" />
@@ -460,14 +463,17 @@
     <ClCompile Include="Core\EntryPoint.cpp" />
     <ClCompile Include="Core\MusicFileOperations.cpp" />
     <ClCompile Include="Analyzers\Base\BaseAnalyzer.cpp" />
-    <ClCompile Include="Filters\Filter.cpp" />
-    <ClCompile Include="Filters\NoiseFloor.cpp" />
-    <ClCompile Include="Filters\SimplifiedKalman.cpp" />
+    <ClCompile Include="Filters\Base\Filter.cpp" />
+    <ClCompile Include="Filters\Base\NoiseFloor.cpp" />
+    <ClCompile Include="Filters\Base\SimplifiedKalman.cpp" />
     <ClCompile Include="Core\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Dependencies\jsoncpp.cpp" />
+    <ClCompile Include="Filters\Windows\HanningWindow.cpp" />
+    <ClCompile Include="Core\Processor.cpp" />
+    <ClCompile Include="Filters\Windows\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="libfftw3-3.lib" />

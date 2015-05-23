@@ -46,7 +46,7 @@ void MusicFileOperations::CopyVectorToPointerArray(SpectralDataCollection& vecto
 long MusicFileOperations::CaptureFileData(AudioFileData& waveform_data)
 {
     // Read the file indicated by Filename argument
-	std::ifstream data_file_stream((Settings.song_filename_ + Settings.kEmcFileExtension).c_str(), std::ios::binary);
+	std::ifstream data_file_stream((Settings.song_filename_ + Constants::kEmcFileExtension).c_str(), std::ios::binary);
 
     long counted_points = 0;
 	while (data_file_stream)
@@ -111,32 +111,6 @@ void MusicFileOperations::Normalize(SpectralDataCollection& data)
 	std::for_each(data->begin(), data->end(), [max_value](double& x){ x /= max_value; });
 }
 
-// double = hanningMultiplier(int, int)
-// ---
-// Returns an offset cosine wave of (int) width at a specific index
-double MusicFileOperations::GetHanningMultiplier(int index_at)
-{
-	return 0.5 * (1 - cos(2 * 3.14 * index_at / (Settings.window_size_ - 1)));
-}
-
-// applyHanningWindow(int*, double*, int)
-// ---
-// Takes an array of (int) points in the time domain (int) and applies a Hanning Window
-// of specified width. The result is returned through the double* dataOut argument.
-// Immediately normalizes the data after the hanning window is applied.
-//
-// Performance: O(n)
-void MusicFileOperations::ApplyHanningWindow(SpectralDataCollection& data)
-{
-    auto index = int(0);
-    for (DataSetIterator it = data->begin(); it != data->end(); ++it)
-    {
-        *it = double(*it * GetHanningMultiplier(++index));
-    }
-
-    Normalize(data);
-}
-
 // double* = prepareAndExecuteFFT(const int*)
 // ---
 // Execute the FFT, convert the results from the complex frequency domain to the
@@ -146,6 +120,6 @@ SpectralDataCollection MusicFileOperations::PrepareAndExecuteFFT(SpectralDataCol
 	auto maxFrequency = CoreMath::ConvertFrequencyToInt(Settings.maximum_frequency_accounted_);
 
     // Execute the FFT
-    ApplyHanningWindow(data);
+    //ApplyHanningWindow(data);
 	return ExecuteFastFourierTransform(data, fft_plan, working_array, complex_results);
 }

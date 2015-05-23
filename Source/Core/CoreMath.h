@@ -25,6 +25,8 @@ public:
 	static std::string GetPath(char* base_path);
 	static std::string GetFilenameWithoutExtension(std::string full_path);
 	static std::string ChangeFileExtension(std::string full_path, std::string new_extension);
+
+	static double GetHanningMultiplier(int index_at);
 };
 
 #endif

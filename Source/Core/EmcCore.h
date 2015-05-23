@@ -10,6 +10,9 @@
 
 class EmcCore
 {
+	// TODO: Replace with Processors. Slated for 0.2.2.0
+	SettingsBuilder::AnalyzerCollection* analyzer_collection_;
+
 public:
 	EmcCore(std::string configuration_file_path);
 	~EmcCore();
@@ -21,9 +24,6 @@ public:
 protected:
 	void Decode();
 	void Read();
-
-private:
-	SettingsBuilder::AnalyzerCollection* analyzer_collection_;
 };
 
 #endif
