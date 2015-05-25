@@ -29,8 +29,9 @@ public:
 	std::string application_root_;
 	std::string song_filename_;
 
-	Endianness endianness_of_output_ = Endianness::BigEndian;
-	EMC_Mode	emc_mode_;
+	Endianness		endianness_of_output_ = Endianness::BigEndian;
+	EMC_Mode		emc_mode_			  = EMC_Mode::Decode;
+	EMC_Output_Mode output_mode_		  = EMC_Output_Mode::Text;
 
 	void CalculateTemporalShiftWidth()
 	{

@@ -20,7 +20,7 @@ public:
 	BaseAnalyzer(double lower_frequency, double upper_frequency);
 	BaseAnalyzer(double lower_frequency, double upper_frequency, int resolution);
 
-	virtual void Analyze(AudioFileData audio_data);
+	virtual void Analyze(SharedAudioData audio_data);
 	virtual void Analyze(UniqueDataSet& spectral_data);
 };
 

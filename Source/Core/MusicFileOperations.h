@@ -13,19 +13,18 @@ class MusicFileOperations
 public:
 	typedef std::shared_ptr<std::vector<char>> MP3FileData;
 	static MP3FileData GetDataFromMP3();
-	static SpectralDataCollection PrepareAndExecuteFFT(SpectralDataCollection& data, fftw_plan& fft_plan, double* working_array,
+	static SharedDataSet PrepareAndExecuteFFT(SharedDataSet& data, fftw_plan& fft_plan, double* working_array,
 		fftw_complex* complex_fft_results);
 	
 private:
 	// FFT PreProcessing
-	static void CopyVectorToPointerArray(SpectralDataCollection& vector_in, double* array_out);
-	static void Normalize(SpectralDataCollection& data);
+	static void Normalize(SharedDataSet& data);
 
 	// Fast Fourier Transform
-	static SpectralDataCollection ExecuteFastFourierTransform(SpectralDataCollection& data, fftw_plan& fft_plan, double* working_array,
+	static SharedDataSet ExecuteFastFourierTransform(SharedDataSet& data, fftw_plan& fft_plan, double* working_array,
 		fftw_complex* complex_fft_results);
 
-	static long CaptureFileData(AudioFileData& waveform_data);
+	static long CaptureFileData(SharedAudioData& waveform_data);
 
 protected:
 };

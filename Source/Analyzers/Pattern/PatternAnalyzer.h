@@ -8,7 +8,7 @@ class PatternAnalyzer : public BaseAnalyzer
 {
 public:
 	PatternAnalyzer(int lower_bound, int upper_bound, int resolution);
-	void Analyze(AudioFileData audio_data) override;
+	void Analyze(SharedAudioData audio_data) override;
 };
 
 #endif

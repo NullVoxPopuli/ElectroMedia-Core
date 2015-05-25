@@ -50,7 +50,7 @@ void CoreMath::Debug(std::string debug_comment)
 std::string CoreMath::GetPath(char* base_path)
 {
 	auto path = (std::string)base_path;
-	auto executable_location = ((std::string)path).find("EMC.exe");
+	auto executable_location = ((std::string)path).find("ElectroMedia.exe");
 	return std::string(path.begin(), executable_location + path.begin());
 }
 

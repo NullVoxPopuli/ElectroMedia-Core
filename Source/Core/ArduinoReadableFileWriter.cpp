@@ -21,24 +21,6 @@ ArduinoReadableFileWriter::~ArduinoReadableFileWriter()
 	}
 }
 
-// setMode(int)	
-// ---
-// Change the way that the write() function behaves
-void ArduinoReadableFileWriter::SetMode(EMC_Output_Mode new_mode)
-{
-	//configuration_settings_->emc_mode_ = new_mode;
-	//
-    //switch(mode_)
-    //{
-	//case(EMC_Output_Mode::ArduinoReadableFile):
-    //    number_of_outputs_ = ARDUINO_UNO_IO_PINS;
-    //    break;
-	//
-    //default:
-    //    number_of_outputs_ = 0;
-    //}
-}
-
 // bool = isTextWritable()
 // ---
 // Checks to see that the arf_stream_ is open and that mode_ == MODE_TEXT.
@@ -50,11 +32,11 @@ bool ArduinoReadableFileWriter::IsTextWritable()
         return false;
     }
 
-    //if(mode_ != EMC_Output_Mode::Text)
-    //{
-    //    CoreMath::Debug("arf_stream_ cannot write a string while not in Text Mode!");
-    //    return false;
-    //}
+    if(Settings.output_mode_ != EMC_Output_Mode::Text)
+    {
+        CoreMath::Debug("arf_stream_ cannot write a string while not in Text Mode!");
+        return false;
+    }
 
     return true;
 }
@@ -87,7 +69,7 @@ void ArduinoReadableFileWriter::Write(int int_to_write)
 // ---
 // Deciphers the data and transforms it into byte format; writes bytes to the output file
 // [WIP]
-void ArduinoReadableFileWriter::Write(SpectralDataCollection& data_to_write)
+void ArduinoReadableFileWriter::Write(SharedDataSet& data_to_write)
 {
     if(!arf_stream_.is_open())
     {
@@ -95,42 +77,24 @@ void ArduinoReadableFileWriter::Write(SpectralDataCollection& data_to_write)
         return;
     }
 
-    //switch(mode_)
-    //{
-    //    // Text mode is meant to be human-readable and is used for debug purposes
-	//case(EMC_Output_Mode::Text):
-	//	WriteDoubleInTextMode(data_to_write);
-    //    break;
-	//
-    //    // Regular Arduino Mode uses 16 output pins
-	//case(EMC_Output_Mode::ArduinoReadableFile):
-    //    break;
-	//
-	//case(EMC_Output_Mode::Binary):
-	//	break;
-	//
-    //default:
-    //    CoreMath::Debug("ArduinoReadableFileWriter writer cannot write as it is in an undefined mode!");
-    //}
+    switch(Settings.output_mode_)
+    {
+        // Text mode is meant to be human-readable and is used for debug purposes
+	case(EMC_Output_Mode::Text):
+		//WriteDoubleInTextMode(data_to_write); TODO
+        break;
+	
+        // Regular Arduino Mode uses 16 output pins
+	case(EMC_Output_Mode::ArduinoReadableFile):
+        break;
+	
+	case(EMC_Output_Mode::Binary):
+		break;
+	
+    default:
+        CoreMath::Debug("ArduinoReadableFileWriter writer cannot write as it is in an undefined mode!");
+    }
 }
-
-int ArduinoReadableFileWriter::CalculateDynamicNoiseFloor(SpectralDataCollection& data)
-{
-    auto pre_noise_floor_maximum = *std::max_element(data->begin(), data->end());
-
-	return int(pre_noise_floor_maximum * (double(Settings.noise_floor_percentage_) / 100));
-}
-
-void ArduinoReadableFileWriter::WriteDoubleInTextMode(SpectralDataCollection& data_to_write)
-{
-	auto dynamic_noise_floor = Settings.noise_floor_percentage_;
-
-		// TODO
-
-    ArduinoReadableFileWriter::arf_stream_ << "\n";
-}
-
-
 
 // close()
 // ---

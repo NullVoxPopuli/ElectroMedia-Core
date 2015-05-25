@@ -7,7 +7,6 @@
 
 #include "targetver.h"
 #include <stdio.h>
-#include <tchar.h>
 #include <iostream>
 #include <fstream>
 #include <cmath>
@@ -17,15 +16,13 @@
 #include <memory>
 #include <algorithm>
 #include "EmcSettings.h"
-#include "boost\dynamic_bitset\dynamic_bitset.hpp"
 #include "boost\function\function0.hpp"
 
 // NAMESPACES
 using std::vector;
-using boost::dynamic_bitset;
 
 // TYPE DEFINITIONS
-typedef std::shared_ptr<vector<char>>	AudioFileData;
+typedef std::shared_ptr<vector<char>>	SharedAudioData;
 typedef std::unique_ptr<vector<double>> UniqueDataSet;
-typedef std::shared_ptr<vector<double>> SpectralDataCollection;
-typedef vector<double>::iterator DataSetIterator;
+typedef std::shared_ptr<vector<double>> SharedDataSet;
+typedef vector<double>::iterator		DataSetIterator;

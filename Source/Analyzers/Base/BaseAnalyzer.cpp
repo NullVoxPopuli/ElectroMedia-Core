@@ -31,7 +31,7 @@ BaseAnalyzer::BaseAnalyzer(double lower_frequency, double upper_frequency, int r
 	upper_bound_ = CoreMath::ConvertFrequencyToInt(upper_frequency);
 }
 
-void BaseAnalyzer::Analyze(AudioFileData audio_data)
+void BaseAnalyzer::Analyze(SharedAudioData audio_data)
 {
 }
 

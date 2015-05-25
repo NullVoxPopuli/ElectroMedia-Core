@@ -6,13 +6,13 @@ LinearAnalyzer::LinearAnalyzer(int lower_bound, int upper_bound, int resolution)
 { 
 }
 
-void LinearAnalyzer::Analyze(AudioFileData audio_data)
+void LinearAnalyzer::Analyze(SharedAudioData audio_data)
 {
 	// Settings
 	auto window_size = Settings.window_size_;
 	auto window_shift = Settings.window_shift_amount_;
 
-	SpectralDataCollection pre_process_data = SpectralDataCollection();
+	SharedDataSet pre_process_data = SharedDataSet();
 	vector<char>::const_iterator first, last;
 	auto sweeps = (unsigned int)0;
 
@@ -40,7 +40,7 @@ void LinearAnalyzer::Analyze(AudioFileData audio_data)
 	fftw_cleanup();
 }
 
-void LinearAnalyzer::LinearAnalysis(SpectralDataCollection spectral_data)
+void LinearAnalyzer::LinearAnalysis(SharedDataSet spectral_data)
 {
 	// Flesh out later!
 }

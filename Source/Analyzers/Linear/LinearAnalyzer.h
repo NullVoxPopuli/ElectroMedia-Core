@@ -8,9 +8,9 @@ class LinearAnalyzer : public BaseAnalyzer
 {
 public:
 	LinearAnalyzer(int lower_bound, int upper_bound, int resolution);
-	void Analyze(AudioFileData audio_data) override;
+	void Analyze(SharedAudioData audio_data) override;
 	
-	virtual void LinearAnalysis(SpectralDataCollection spectral_data);
+	virtual void LinearAnalysis(SharedDataSet spectral_data);
 };
 
 #endif

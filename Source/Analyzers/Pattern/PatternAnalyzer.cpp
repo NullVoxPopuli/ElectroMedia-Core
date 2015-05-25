@@ -6,7 +6,7 @@ PatternAnalyzer::PatternAnalyzer(int lower_bound, int upper_bound, int resolutio
 { 
 }
 
-void PatternAnalyzer::Analyze(AudioFileData audio_data)
+void PatternAnalyzer::Analyze(SharedAudioData audio_data)
 {
 	//todo
 }
