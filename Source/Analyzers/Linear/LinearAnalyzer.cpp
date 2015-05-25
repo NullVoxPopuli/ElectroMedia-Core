@@ -3,44 +3,25 @@
 
 LinearAnalyzer::LinearAnalyzer(int lower_bound, int upper_bound, int resolution)
 	: BaseAnalyzer(lower_bound, upper_bound, resolution)
-{ 
+{
 }
 
 void LinearAnalyzer::Analyze(SharedAudioData audio_data)
 {
-	// Settings
-	auto window_size = Settings.window_size_;
-	auto window_shift = Settings.window_shift_amount_;
-
 	SharedDataSet pre_process_data = SharedDataSet();
-	vector<char>::const_iterator first, last;
-	auto sweeps = (unsigned int)0;
-
-	// For FFTW 
-	auto working_double_array = (double*)fftw_malloc(sizeof(double) * window_size);
-	auto complex_results = (fftw_complex*)fftw_malloc(sizeof(fftw_complex) * window_size);
-	auto new_plan = fftw_plan_dft_r2c_1d(window_size, working_double_array, complex_results, FFTW_MEASURE);
+	vector<char>::const_iterator window_origin = audio_data->begin();
 
 	// Loop through everything
-	while (((sweeps++)*window_shift + window_size) < audio_data->size())
+	while (window_origin + Settings.window_size_ < audio_data->end())
 	{
-		first = audio_data->begin() + sweeps * window_shift;
-		last = audio_data->begin() + sweeps * window_shift + window_size;
-
-		vector<double> windowed_subvector(first, last);
+		vector<double> windowed_subvector(window_origin, window_origin + Settings.window_size_);
 		pre_process_data = std::make_shared<vector<double>>(windowed_subvector);
+		window_origin += Settings.window_shift_amount_;
 
-		auto spectral_data = MusicFileOperations::PrepareAndExecuteFFT(pre_process_data, new_plan, working_double_array, complex_results);
-		LinearAnalysis(spectral_data);
+		LinearAnalysis(pre_process_data);
 	}
-
-	fftw_destroy_plan(new_plan);
-	fftw_free(working_double_array);
-	fftw_free(complex_results);
-	fftw_cleanup();
 }
 
-void LinearAnalyzer::LinearAnalysis(SharedDataSet spectral_data)
+void LinearAnalyzer::LinearAnalysis(SharedDataSet pre_process_data)
 {
-	// Flesh out later!
 }

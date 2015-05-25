@@ -1155,6 +1155,9 @@
     <ClInclude Include="Filters\Windows\HanningWindow.h">
       <Filter>Filters\Windows\Headers</Filter>
     </ClInclude>
+    <ClInclude Include="LinearFFTAnalyzer.h">
+      <Filter>Analyzers\Linear\Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\ArduinoReadableFileWriter.cpp">
@@ -1228,6 +1231,9 @@
     </ClCompile>
     <ClCompile Include="Filters\Windows\HanningWindow.cpp">
       <Filter>Filters\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="LinearFFTAnalyzer.cpp">
+      <Filter>Analyzers\Linear</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

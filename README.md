@@ -9,17 +9,12 @@ ElectroMedia is a software package which is capable of taking audio files (MP3 o
 
 ## Contributing
 * Fork EMC-Core to a repository of your own
-* Download [Boost Version 1.58.0](http://www.boost.org/) or later and unzip to your /Program Files (x86)/ directory
 * Download [the dependencies suite for EMC-Core](http://www.neuravion.io/file.axd?file=/EMC/EMC%20Requirements.zip "EMC-Core Dependencies") and unzip to the folder containing your executable
 
 ## Changelog
-* **v0.2.0.6b** -- Added Noise floor functionality. Please see [EMC Blog Post #1](http://www.neuravion.io/emc/post/on-noise-floor-filtering-of-audio-samples) about what approach I'm taking with respect to the Noise Floor Filter.
-* **v0.2.0.6** -- Added gloabally-accessible application_root_ variable in EmcSettings. Added Filters, working on Processor class next.
-* **v0.2.0.5** -- Removed Legacy functionality from Analyzers in preparation for v0.2.1.0
-* **v0.2.0.4** -- Added Time Signature and Meter Analyzers as PatternAnalyzers. No implementation as of yet.
-* **v0.2.0.3** -- Added Linear and Pattern Analyzer, changed some things in the directories to match the new patterns
-* **v0.2.0.2** -- More changes to directory structure with some improvements to the Solution Explorer view.
-* **v0.2.0.1** -- Changed directory structure to make a bit more sense.
-* **v0.2.0.0** -- **Pre-Alpha Release 1**. Completed transition to the new EmcCore structure. FFT analysis is still part of the MusicFileOperations static class, but the Analyzers are in charge of their own behavior now. Goals now are to flesh out the Analyzer behavior to make the system more robust. Part of this Pre-Alpha Release is to also incorporate the GoogleTest framework. I will also be working heavily on performance enhancements (stack vs. heap memory for song data and the like, algorithm performance, et cetera).
-* **v0.1.9.7** -- Fleshed out more with the analyzers. Going to postpone the Analyzer threading until Pre Alpha 2 (v0.3.0.0). All that remains at the moment for Pre Alpha 1 (v0.2.0.0) is to make ConvertMp3ToArf to return a vector of spectral data and have the Analyzers do their thing in Analyzer::Analyze.
-* **v0.1.9.6** -- Changed the way that EMC handles Settings with config.json. Now, EMC has a global singleton "Settings" which is loaded into memory by the "SettingsBuilder" (formerly ConfigurationHandler). Further, major improvements have been added to the structure of EMC in preparation for the addition of the Analyzer package.
+**v0.2.1**
+--* Added Filters, Processors, and Analyzers. Filters are applied in sequence to the data set specific to a Processor; the filtered data is then sent to each Analyzer independently.
+--* Removed Boost, as functionality is now deprecated. It will be reimplemented at a later point.
+--* Finished redoing as much of the iterator handling with lambdas and STL Algorithms.
+--* Changed some typdefs which were not consistent with the nomenclature. 
+--* Moved all FFTW functionality into its own Analyzer (LinearFFTAnalyzer). This works in sequence the same way as ArduinoReadableFileWriter did a long time ago.
