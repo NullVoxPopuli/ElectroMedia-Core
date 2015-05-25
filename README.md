@@ -12,9 +12,9 @@ ElectroMedia is a software package which is capable of taking audio files (MP3 o
 * Download [the dependencies suite for EMC-Core](http://www.neuravion.io/file.axd?file=/EMC/EMC%20Requirements.zip "EMC-Core Dependencies") and unzip to the folder containing your executable
 
 ## Changelog
-**v0.2.1**
---* Added Filters, Processors, and Analyzers. Filters are applied in sequence to the data set specific to a Processor; the filtered data is then sent to each Analyzer independently.
---* Removed Boost, as functionality is now deprecated. It will be reimplemented at a later point.
---* Finished redoing as much of the iterator handling with lambdas and STL Algorithms.
---* Changed some typdefs which were not consistent with the nomenclature. 
---* Moved all FFTW functionality into its own Analyzer (LinearFFTAnalyzer). This works in sequence the same way as ArduinoReadableFileWriter did a long time ago.
+#####Update 0.2.1
+* Added Filters, Processors, and Analyzers. Filters are applied in sequence to the data set specific to a Processor; the filtered data is then sent to each Analyzer independently.
+* Removed Boost, as functionality is now deprecated. It will be reimplemented at a later point.
+* Finished redoing as much of the iterator handling with lambdas and STL Algorithms.
+* Changed some typdefs which were not consistent with the nomenclature. 
+* Moved all FFTW functionality into its own Analyzer (LinearFFTAnalyzer). This works in sequence the same way as ArduinoReadableFileWriter did a long time ago.
