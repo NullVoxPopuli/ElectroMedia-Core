@@ -11,7 +11,7 @@ ElectroMedia is a software package which is capable of taking audio files (MP3 o
 
 ### Prerequisite
 
-    sudo apt-get install libboost-all-dev libavcodec-dev libavformat-dev libswscale-dev libjsoncpp-dev
+    sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libjsoncpp-dev
 
 ### Make
 
@@ -31,15 +31,3 @@ will output an executable, "EMC"
 * Finished redoing as much of the iterator handling with lambdas and STL Algorithms.
 * Changed some typdefs which were not consistent with the nomenclature.
 * Moved all FFTW functionality into its own Analyzer (LinearFFTAnalyzer). This works in sequence the same way as ArduinoReadableFileWriter did a long time ago.
-
-* **v0.2.0.4** -- Added Time Signature and Meter Analyzers as PatternAnalyzers. No implementation as of yet.
-* **v0.2.0.3** -- Added Linear and Pattern Analyzer, changed some things in the directories to match the new patterns
-* **v0.2.0.2** -- More changes to directory structure with some improvements to the Solution Explorer view.
-* **v0.2.0.1** -- Changed directory structure to make a bit more sense.
-* **v0.2.0.0** -- **Pre-Alpha Release 1**. Completed transition to the new EmcCore structure. FFT analysis is still part of the MusicFileOperations static class, but the Analyzers are in charge of their own behavior now. Goals now are to flesh out the Analyzer behavior to make the system more robust. Part of this Pre-Alpha Release is to also incorporate the GoogleTest framework. I will also be working heavily on performance enhancements (stack vs. heap memory for song data and the like, algorithm performance, et cetera).
-* **v0.1.9.7** -- Fleshed out more with the analyzers. Going to postpone the Analyzer threading until Pre Alpha 2 (v0.3.0.0). All that remains at the moment for Pre Alpha 1 (v0.2.0.0) is to make ConvertMp3ToArf to return a vector of spectral data and have the Analyzers do their thing in Analyzer::Analyze.
-* **v0.1.9.6** -- Changed the way that EMC handles Settings with config.json. Now, EMC has a global singleton "Settings" which is loaded into memory by the "SettingsBuilder" (formerly ConfigurationHandler). Further, major improvements have been added to the structure of EMC in preparation for the addition of the Analyzer package.
-* **v0.1.9.5** -- Major improvements to nomenclature. Changed many variable names and header guards to fit Google's C++ Style Guide. Also fixed up header inclusions and removed vestigial FrequencyMaximum class.
-* **v0.1.9.4** -- Added enumerated Return values for FFmpeg function, added some QoL improvements to ConfigurationHandler and CoreMath for dealing with file extensions and the like. Started tearing apart the ConvertMP3ToARF stuff. Moved ReadARF to EmcCore.
-* **v0.1.9.3** -- Removed FrequencyRangeProfile completely in response to Issue #7 on Github.
-* **v0.1.9.2** -- Added validation to AnalyzerFactory in response to Issue #6 "AnalyzerFactory should be fleshed out more (e.g. Validation)"
