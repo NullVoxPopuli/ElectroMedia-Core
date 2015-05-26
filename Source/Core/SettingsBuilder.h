@@ -1,4 +1,4 @@
-#include "stdafx.h"	
+#include "stdafx.h"
 #include "ArduinoReadableFileWriter.h"
 #include "EMCModes.h"
 #include "ConfigurationFileFields.h"

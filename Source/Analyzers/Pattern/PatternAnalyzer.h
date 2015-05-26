@@ -1,5 +1,5 @@
-#include "../Core/stdafx.h"
-#include "../Analyzers/Base/BaseAnalyzer.h"
+#include "../../Core/stdafx.h"
+#include "../Base/BaseAnalyzer.h"
 
 #ifndef	EMC_PatternAnalyzer_H_
 #define EMC_PatternAnalyzer_H_

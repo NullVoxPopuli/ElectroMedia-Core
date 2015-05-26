@@ -1,9 +1,9 @@
-#include "../Core/stdafx.h"
+#include "../../Core/stdafx.h"
 #include <sstream>
 #include <algorithm>
-#include "../Core/CoreMath.h"
-#include "../Core/MusicFileOperations.h"
-#include "../Core/ConfigurationFileFields.h"
+#include "../../Core/CoreMath.h"
+#include "../../Core/MusicFileOperations.h"
+#include "../../Core/ConfigurationFileFields.h"
 
 #ifndef EMC_BaseAnalyzer_H_
 #define EMC_BaseAnalyzer_H_

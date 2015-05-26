@@ -1,5 +1,5 @@
-#include "../Core/stdafx.h"
-#include "../Core/Constants.h"
+#include "../../Core/stdafx.h"
+#include "../../Core/Constants.h"
 #include "BaseAnalyzer.h"
 
 // BaseAnalyzer Constructor
@@ -21,8 +21,7 @@ BaseAnalyzer::BaseAnalyzer(int lower_bound, int upper_bound, int resolution)
 
 BaseAnalyzer::BaseAnalyzer(double lower_frequency, double upper_frequency)
 	: BaseAnalyzer(lower_frequency, upper_frequency, 1)
-{
-}
+{ }
 
 BaseAnalyzer::BaseAnalyzer(double lower_frequency, double upper_frequency, int resolution)
 	: bit_resolution_(resolution)
@@ -32,9 +31,7 @@ BaseAnalyzer::BaseAnalyzer(double lower_frequency, double upper_frequency, int r
 }
 
 void BaseAnalyzer::Analyze(SharedAudioData audio_data)
-{
-}
+{ }
 
 void BaseAnalyzer::Analyze(UniqueDataSet& audio_data)
-{
-}
+{ }

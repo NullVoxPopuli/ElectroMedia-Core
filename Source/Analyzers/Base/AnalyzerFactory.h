@@ -1,7 +1,7 @@
-#include "../Core/stdafx.h"
-#include "../Analyzers/Linear/HillEffectAnalyzer.h"
-#include "../Analyzers/Pattern/FeatureExtractionAnalyzer.h"
-#include "../Analyzers/Linear/IntensityAnalyzer.h"
+#include "../../Core/stdafx.h"
+#include "../Linear/HillEffectAnalyzer.h"
+#include "../Pattern/FeatureExtractionAnalyzer.h"
+#include "../Linear/IntensityAnalyzer.h"
 #include "BaseAnalyzer.h"
 
 #ifndef EMC_AnalyzerFactory_H_
@@ -16,7 +16,7 @@ public:
 	static BaseAnalyzer* Create(std::string type, double lowerFrequency, double upperFrequency);
 	static BaseAnalyzer* Create(std::string type, double lowerFrequency, double upperFrequency, int resolution);
 
-private: 
+private:
 	static void Validate(int& lowerBound, int& upperBound, int& resolution);
 };
 

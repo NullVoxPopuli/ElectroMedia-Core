@@ -1,4 +1,4 @@
-#include "../Core/stdafx.h"
+#include "../../Core/stdafx.h"
 #include "LinearAnalyzer.h"
 
 #ifndef EMC_IntensityAnalyzer_H_

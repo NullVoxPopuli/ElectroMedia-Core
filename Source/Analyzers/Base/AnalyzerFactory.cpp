@@ -1,4 +1,4 @@
-#include "../Core/stdafx.h"
+#include "../../Core/stdafx.h"
 #include "AnalyzerFactory.h"
 
 BaseAnalyzer* AnalyzerFactory::Create(std::string type, int lowerBound, int upperBound, int resolution)

@@ -161,7 +161,6 @@
     <ClInclude Include="Core\MusicFileOperations.h" />
     <ClInclude Include="Analyzers\Base\BaseAnalyzer.h" />
     <ClInclude Include="Core\stdafx.h" />
-    <ClInclude Include="Core\targetver.h" />
     <ClInclude Include="Filters\Base\Filter.h" />
     <ClInclude Include="Filters\Base\SimplifiedKalman.h" />
     <ClInclude Include="Filters\Base\NoiseFloor.h" />

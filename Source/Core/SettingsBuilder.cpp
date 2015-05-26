@@ -1,5 +1,7 @@
 #include "stdafx.h"
 #include "SettingsBuilder.h"
+#include <jsoncpp/json/json.h>
+
 
 SettingsBuilder::SettingsBuilder(std::string configuration_file_directory, std::string configuration_file_name)
 	: configuration_directory_(configuration_file_directory),
@@ -9,7 +11,7 @@ SettingsBuilder::SettingsBuilder(std::string configuration_file_directory, std::
 
 // Load in the JSON Configuration file at the specified path
 void SettingsBuilder::Load()
-{	
+{
 	std::ifstream in(configuration_directory_ + configuration_filename_);
 	Json::Reader reader;
 	Json::Value decoded_json;
@@ -46,13 +48,13 @@ SettingsBuilder::AnalyzerCollection* SettingsBuilder::CreateAnalyzers()
 	auto analyzers = new SettingsBuilder::AnalyzerCollection;
 
 	auto it = decoded_json["Analyzers"].begin();
-	
+
 	// Each loop corresponds to a subnode in the "algorithms" node
 	while (it != decoded_json["Analyzers"].end())
 	{
 		auto new_analyzer = std::make_shared<BaseAnalyzer*>(AnalyzerFactory::Create((*it++)["type"].asString()));
 		analyzers->push_back(new_analyzer);
 	}
-	
+
 	return analyzers;
 }
