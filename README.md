@@ -21,7 +21,7 @@ will output an executable, "EMC"
 
 ## Contributing
 * Fork EMC-Core to a repository of your own
-* Download [the dependencies suite for EMC-Core](http://www.neuravion.io/file.axd?file=/EMC/EMC%20Windows%20Requirements.zip "EMC-Core Dependencies") and unzip to the folder containing your executable
+* Download [the dependencies suite for EMC-Core](http://www.neuravion.io/file.axd?file=/EMC/EMC%20Windows%20Dependencies.zip "EMC-Core Dependencies") and unzip to the folder containing your executable
 
 ## Changelog
 
