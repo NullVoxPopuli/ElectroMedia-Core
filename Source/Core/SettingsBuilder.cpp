@@ -1,7 +1,5 @@
 #include "stdafx.h"
 #include "SettingsBuilder.h"
-#include <jsoncpp/json/json.h>
-
 
 SettingsBuilder::SettingsBuilder(std::string configuration_file_directory, std::string configuration_file_name)
 	: configuration_directory_(configuration_file_directory),

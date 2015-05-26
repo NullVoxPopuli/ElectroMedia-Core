@@ -46,6 +46,7 @@ EMC
 [Rr]elease/
 x64/
 build/
+include/
 [Bb]in/
 [Oo]bj/
 

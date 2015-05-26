@@ -42,7 +42,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\Debug\</OutDir>
+    <OutDir>..\build\</OutDir>
     <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -55,12 +55,12 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProgramFiles)\boost;$(ProjectDir)\Source\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)\Dependencies\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\include;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>avcodec.lib;avdevice.lib;avfilter.lib;avformat.lib;avutil.lib;postproc.lib;swresample.lib;swscale.lib;libfftw3-3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -82,6 +82,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\include\Jsoncpp\json\json-forwards.h" />
+    <ClInclude Include="..\include\Jsoncpp\json\json.h" />
     <ClInclude Include="Analyzers\Linear\LinearAnalyzer.h" />
     <ClInclude Include="Analyzers\Pattern\MeterAnalyzer.h" />
     <ClInclude Include="Analyzers\Pattern\PatternAnalyzer.h" />
@@ -89,7 +91,6 @@
     <ClInclude Include="Analyzers\Pattern\TimeSignatureAnalyzer.h" />
     <ClInclude Include="Core\CoreMath.h" />
     <ClInclude Include="Core\ConfigurationFileFields.h" />
-    <ClInclude Include="Core\fftw3.h" />
     <ClInclude Include="Core\SettingsBuilder.h" />
     <ClInclude Include="Core\Constants.h" />
     <ClInclude Include="Core\EmcCore.h" />
@@ -101,62 +102,6 @@
     <ClInclude Include="Core\EMCModes.h" />
     <ClInclude Include="Analyzers\Pattern\FeatureExtractionAnalyzer.h" />
     <ClInclude Include="Core\ArduinoReadableFileWriter.h" />
-    <ClInclude Include="Dependencies\json\json-forwards.h" />
-    <ClInclude Include="Dependencies\json\json.h" />
-    <ClInclude Include="dev\include\libavcodec\avcodec.h" />
-    <ClInclude Include="dev\include\libavcodec\avfft.h" />
-    <ClInclude Include="dev\include\libavcodec\dxva2.h" />
-    <ClInclude Include="dev\include\libavcodec\version.h" />
-    <ClInclude Include="dev\include\libavdevice\avdevice.h" />
-    <ClInclude Include="dev\include\libavdevice\version.h" />
-    <ClInclude Include="dev\include\libavfilter\asrc_abuffer.h" />
-    <ClInclude Include="dev\include\libavfilter\avcodec.h" />
-    <ClInclude Include="dev\include\libavfilter\avfilter.h" />
-    <ClInclude Include="dev\include\libavfilter\avfiltergraph.h" />
-    <ClInclude Include="dev\include\libavfilter\buffersink.h" />
-    <ClInclude Include="dev\include\libavfilter\buffersrc.h" />
-    <ClInclude Include="dev\include\libavfilter\version.h" />
-    <ClInclude Include="dev\include\libavformat\avformat.h" />
-    <ClInclude Include="dev\include\libavformat\avio.h" />
-    <ClInclude Include="dev\include\libavformat\version.h" />
-    <ClInclude Include="dev\include\libavutil\adler32.h" />
-    <ClInclude Include="dev\include\libavutil\aes.h" />
-    <ClInclude Include="dev\include\libavutil\attributes.h" />
-    <ClInclude Include="dev\include\libavutil\audioconvert.h" />
-    <ClInclude Include="dev\include\libavutil\audio_fifo.h" />
-    <ClInclude Include="dev\include\libavutil\avassert.h" />
-    <ClInclude Include="dev\include\libavutil\avconfig.h" />
-    <ClInclude Include="dev\include\libavutil\avstring.h" />
-    <ClInclude Include="dev\include\libavutil\avutil.h" />
-    <ClInclude Include="dev\include\libavutil\base64.h" />
-    <ClInclude Include="dev\include\libavutil\blowfish.h" />
-    <ClInclude Include="dev\include\libavutil\bprint.h" />
-    <ClInclude Include="dev\include\libavutil\bswap.h" />
-    <ClInclude Include="dev\include\libavutil\buffer.h" />
-    <ClInclude Include="dev\include\libavutil\channel_layout.h" />
-    <ClInclude Include="dev\include\libavutil\common.h" />
-    <ClInclude Include="dev\include\libavutil\cpu.h" />
-    <ClInclude Include="dev\include\libavutil\crc.h" />
-    <ClInclude Include="dev\include\libavutil\dict.h" />
-    <ClInclude Include="dev\include\libavutil\downmix_info.h" />
-    <ClInclude Include="dev\include\libavutil\error.h" />
-    <ClInclude Include="dev\include\libavutil\eval.h" />
-    <ClInclude Include="dev\include\libavutil\ffversion.h" />
-    <ClInclude Include="dev\include\libavutil\fifo.h" />
-    <ClInclude Include="dev\include\libavutil\file.h" />
-    <ClInclude Include="dev\include\libavutil\frame.h" />
-    <ClInclude Include="dev\include\libavutil\hmac.h" />
-    <ClInclude Include="dev\include\libavutil\imgutils.h" />
-    <ClInclude Include="dev\include\libavutil\intfloat.h" />
-    <ClInclude Include="dev\include\libavutil\intfloat_readwrite.h" />
-    <ClInclude Include="dev\include\libavutil\intreadwrite.h" />
-    <ClInclude Include="dev\include\libavutil\lfg.h" />
-    <ClInclude Include="dev\include\libavutil\log.h" />
-    <ClInclude Include="dev\include\libavutil\lzo.h" />
-    <ClInclude Include="dev\include\libavutil\version.h" />
-    <ClInclude Include="dev\include\libpostproc\version.h" />
-    <ClInclude Include="dev\include\libswresample\version.h" />
-    <ClInclude Include="dev\include\libswscale\version.h" />
     <ClInclude Include="Core\MP3toData.h" />
     <ClInclude Include="Core\MusicFileOperations.h" />
     <ClInclude Include="Analyzers\Base\BaseAnalyzer.h" />
@@ -170,6 +115,7 @@
     <ClInclude Include="Analyzers\Linear\LinearFFTAnalyzer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\include\Jsoncpp\jsoncpp.cpp" />
     <ClCompile Include="Analyzers\Linear\LinearAnalyzer.cpp" />
     <ClCompile Include="Analyzers\Pattern\MeterAnalyzer.cpp" />
     <ClCompile Include="Analyzers\Pattern\PatternAnalyzer.cpp" />
@@ -193,14 +139,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Dependencies\jsoncpp.cpp" />
     <ClCompile Include="Filters\Windows\HanningWindow.cpp" />
     <ClCompile Include="Core\Processor.cpp" />
     <ClCompile Include="Filters\Windows\Window.cpp" />
     <ClCompile Include="Analyzers\Linear\LinearFFTAnalyzer.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="libfftw3-3.lib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />

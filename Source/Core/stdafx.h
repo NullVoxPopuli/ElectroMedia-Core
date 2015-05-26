@@ -11,8 +11,8 @@
 //   support #pragma once
 // this is to prevent recursive inclusion of
 // this header
-#ifndef STDAFX_INCLUDED
-#define STDAFX_INCLUDED
+#ifndef EMC_Stdafx_H_
+#define EMC_Stdafx_H_
 
 #include <stdio.h>
 #include <iostream>
@@ -25,7 +25,6 @@
 #include <algorithm>
 #include <thread>
 #include "EmcSettings.h"
-#include "boost/function/function0.hpp"
 
 // NAMESPACES
 using std::vector;
@@ -36,4 +35,4 @@ typedef std::unique_ptr<vector<double>> UniqueDataSet;
 typedef std::shared_ptr<vector<double>> SharedDataSet;
 typedef vector<double>::iterator		DataSetIterator;
 
-#endif /* !STDAFX_INCLUDED */
+#endif /* ! EMC_Stdafx_H_ */

@@ -4,11 +4,12 @@
 #include "CoreMath.h"
 #include <sstream>
 
-extern "C" {
-#include <libavcodec/avcodec.h>
-#include <libavformat/avformat.h>
-#include <libswscale/swscale.h>
-#include <libavutil/avutil.h>
+extern "C" 
+{
+#include "..\..\include\FFmpeg\libavcodec\avcodec.h"
+#include "..\..\include\FFmpeg\libavformat\avformat.h"
+#include "..\..\include\FFmpeg\libswscale\swscale.h"
+#include "..\..\include\FFmpeg\libavutil\avutil.h"
 }
 
 // THIS FILE IS DEDICATED TO WORKING WITH FFTW3
@@ -16,8 +17,6 @@ extern "C" {
 #define INBUF_SIZE 4096
 #define AUDIO_INBUF_SIZE 20480
 #define AUDIO_REFILL_THRESH 4096
-
-#pragma comment(lib, "dependencies\\lib\\avcodec.lib")
 
 // This is the primary decoding mechanism. DubstepCannon.cpp calls this function to invoke
 // several functions from FFMPEG.
