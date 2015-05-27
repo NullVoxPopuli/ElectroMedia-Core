@@ -1,5 +1,4 @@
 #include "stdafx.h"
-#include "fftw3.h"
 #include "CoreMath.h"
 #include "MP3toData.h"
 #include "Constants.h"

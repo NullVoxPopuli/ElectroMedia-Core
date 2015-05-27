@@ -1,4 +1,5 @@
 #include "..\..\Core\stdafx.h"
+#include "..\..\..\include\FFTw\fftw3.h"
 #include "..\Linear\LinearAnalyzer.h"
 
 #ifndef	EMC_LinearFFTAnalyzer_H_
