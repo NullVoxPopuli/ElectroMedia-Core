@@ -9,15 +9,20 @@ ElectroMedia is a software package which is capable of taking audio files (MP3 o
 
 ## Compiling
 
-### Prerequisite (Debian-based Linux running G++)
+### Windows
+Download [the dependencies suite for EMC-Core](http://www.neuravion.io/file.axd?file=/EMC/EMC%20Windows%20Dependencies.zip "EMC-Core Dependencies") and unzip to the application root (which contains /Source, .gitignore, etc.). Open up the solution, then build.
 
-    sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libjsoncpp-dev
+### Linux
+First, acquire dependencies necessary for the project to build:
+
+    $(package_manager_install_command ) libavcodec-dev libavformat-dev libswscale-dev libjsoncpp-dev
 
 After running Make, G++ will output an executable, "EMC"
 
 ## Contributing
-* Fork EMC-Core to a repository of your own
-* Download [the dependencies suite for EMC-Core](http://www.neuravion.io/file.axd?file=/EMC/EMC%20Windows%20Dependencies.zip "EMC-Core Dependencies") and unzip to the folder containing your executable
+* Fork ElectroMedia-Core to a repository of your own
+* Submit Pull Requests when you're ready for us to review your 
+* Send me (@etkirsch) a message on here if you have any questions and I'll do my best to help you out
 
 ## Changelog
 
